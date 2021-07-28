@@ -413,6 +413,7 @@ document.querySelector("#applySearchBTN")
 // Clear search
 document.querySelector("#clearSearchBTN")
   .addEventListener("click", clearSearch);
+
   
 
 // Test for parentNode

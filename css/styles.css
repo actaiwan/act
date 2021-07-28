@@ -199,7 +199,9 @@ body{
 .guideline-content{
 	padding-left: 40px;
 }
-.inspection-collapse .btn, .evaluation-collapse .btn{
+.inspection-collapse .btn, 
+.evaluation-collapse .btn,
+.gt-collapse .btn{
 	background-color: #e3e0dd;
 	color: #000;
 	margin-top:8px;
