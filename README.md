@@ -1,2 +1,2 @@
-# act_2021_07
-First version of the accessibility codes guide website
+# ACT
+Accessibility Code Taiwan, first version of the accessibility codes guide website
