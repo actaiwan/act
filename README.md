@@ -1,2 +1,2 @@
 # ACT
-Code Taiwan, first version of the accessibility codes guide website
+Accessibility Code Taiwan, first version of the accessibility codes guide website
