@@ -182,6 +182,18 @@
 									<li class="criteria-sidebar">
 										<a href="#image-of-text-no-exception"> 1.4.9 Image of Text (no-exception)</a>
 									</li>
+									<li class="criteria-sidebar">
+										<a href="#reflow"> 1.4.10 Reflow </a>
+									</li>
+									<li class="criteria-sidebar">
+										<a href="#non-text-contrast"> 1.4.11 Non-text contrast </a>
+									</li>
+									<li class="criteria-sidebar">
+										<a href="#text-spacing"> 1.4.12 Text Spacing </a>
+									</li>
+									<li class="criteria-sidebar">
+										<a href="#content-on-hover-or-focus"> 1.4.13 Content on Hover or Focus </a>
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -6634,14 +6646,195 @@
 															<br>
 															5. 如果焦點指示器與相鄰的顏色未達3:1對比值，檢查指示器邊線厚度是否有2 CSS像素。
 												      	</div>
-													  </div>
+														<h5 class="card-title"> 預期結果 </h5>
+														<div class="card-text">
+															檢查#2、#4、#5為是。
+														</div>
+													</div>
 												 </div>
 											</div>
 										</div><!-- GN2141001E end -->
 									</div> <!-- Evaluation-1-4-11 accordion end -->
 									<hr>
 								</div>
-							</div> 
+							</div> <!-- Criteria 1.4.11 end --> 
+							<div class="criteria-content accesibility-level-AA">
+									<h4 id="text-spacing"> 1.4.12 Text Spacing </h4>
+									<div class="div-to-filter-out">
+										<p>
+											使用支援以下文字樣式屬性的標記語言實現的內容中，透過設置以下所有內容且在不更改其他樣式屬性下，不會喪失任何內容或功能性：
+											<br>
+											1. 行高至少為字體大小的1.5倍；
+											<br>
+											2. 段落間距至少是字體大小的2倍；
+											<br>
+											3. 字元間距至少為字體大小的0.12倍；中文字元0.14倍。
+											<br>
+											4. 字間距至少為字體大小的0.16倍。
+											<br>
+											例外：在書面文字中並未使用一個或多個這些文字樣式屬性的人類語言和腳本，可以使用專門對應該語言和腳本組合的屬性值。
+											<br>
+											註：中文內容的文字間距可以採用上述的行高和段落間距要求，字距則可參照一般中文出版業的要求。
+										</p>
+									<div class="inspection-collapse">
+										<button class="btn " 
+												type="button" 
+												disabled>
+											<i class="fa fa-chevron-right"></i>
+											No inspection code for criteria 1.4.12
+										</button>
+									</div>	<!-- Inspection-1-4-12 accordion end -->
+
+									<div class="evaluation-collapse">
+										<button class="btn" 
+												type="button" 
+												data-toggle="collapse" 
+												data-target="#evaluation-1-4-12-accordion" 
+												aria-expanded="true"> 
+											<i class="fa fa-chevron-right"></i>
+											Evaluation code for criteria 1.4.12
+										</button>
+									</div>
+									  <div class="accordion collapse evaluation-content" id="evaluation-1-4-12-accordion">
+										  <div class="card">
+										    <div class="card-header" id="CS2141200E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141200E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141200E
+											        </button>
+											    </h5>
+										    </div>
+
+										    <div id="CS2141200E" 
+										    	 class="collapse show" 
+										    	 aria-labelledby="CS2141200E-header" 
+										    	 data-parent="#evaluation-1-4-12-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														允許使用者按照其偏好覆蓋原有的網頁文字設定間距
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															文字容器必須具有文字擴展的空間或容器能夠擴展。
+											      		</p>
+											      		<h5 class="card-title"> Evaluation example </h5>
+											      		<div class="card-text">
+															對於包含換行文字的元素：
+															<br>
+															1. 將縮放級別設置為100％。
+															<br>
+															2. 使用工具或其他機制使用文字間距度量(行高、段落、字母和單詞間距)，例如Text Spacing Bookmarklet或用戶樣式的瀏覽器外掛程式。
+															<br>
+															檢查所有內容和功能是否可用，例如，容器中的文字不會被截斷，也不會與其他內容重疊。
+															<br>
+															注意：如果頁面具有多個佈局(例如，在響應式設計中)，則應在每個佈局中測試文字間距。
+												      	</div>
+														<h5 class="card-title"> 預期結果 </h5>
+														<div class="card-text">
+															#3為是。
+														</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141200E end -->
+									</div> <!-- Evaluation-1-4-12 accordion end -->
+									<hr>
+								</div>
+							</div> <!-- Criteria 1.4.12 end --> 
+							<div class="criteria-content accesibility-level-AA">
+									<h4 id="content-on-hover-or-focus"> 1.4.13 Content on Hover or Focus </h4>
+									<div class="div-to-filter-out">
+										<p>
+											附加懸浮內容因指標移動或鍵盤焦點觸發而可視後隱藏時，下列為真：
+											<br>
+											1. 可移除：提供一種機制移除附加懸浮內容，不用移動指標或鍵盤焦點，除非是附加懸浮內容傳達輸入錯誤或未隱藏或替換其他內容；
+											<br>
+											2. 可移動：如果指標移動可觸發附加懸浮內容，則指標可以在附加懸浮內容上移動而不會使該內容消失；
+											<br>
+											3. 持續性：附加懸浮內容應維持可見，直到指標移出或鍵盤焦點移除、使用者解除或資訊不再有效。
+											<br>
+											例外：附加懸浮內容的視覺呈現應由使用者代理控制而非由網頁作者修改。
+										</p>
+									<div class="inspection-collapse">
+										<button class="btn " 
+												type="button" 
+												disabled>
+											<i class="fa fa-chevron-right"></i>
+											No inspection code for criteria 1.4.13
+										</button>
+									</div>	<!-- Inspection-1-4-13 accordion end -->
+
+									<div class="evaluation-collapse">
+										<button class="btn" 
+												type="button" 
+												data-toggle="collapse" 
+												data-target="#evaluation-1-4-13-accordion" 
+												aria-expanded="true"> 
+											<i class="fa fa-chevron-right"></i>
+											Evaluation code for criteria 1.4.13
+										</button>
+									</div>
+									  <div class="accordion collapse evaluation-content" id="evaluation-1-4-13-accordion">
+										  <div class="card">
+										    <div class="card-header" id="SC2141300E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#SC2141300E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		SC2141300E
+											        </button>
+											    </h5>
+										    </div>
+
+										    <div id="SC2141300E" 
+										    	 class="collapse show" 
+										    	 aria-labelledby="SC2141300E-header" 
+										    	 data-parent="#evaluation-1-4-13-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使懸浮或焦點內容可移除或維持，使其呈現可忽略或持續
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															將指標移至觸發器上方或將鍵盤焦點移至觸發器上時顯示的附加內容(例如，彈出視窗)必須保持可見，讓使用者有時間閱讀內容並與之互動，並且必須允許使用者將指標移到附加內容上，以及允許在不移動焦點的情況下刪除附加內容，以便使用者可以閱讀附加內容所覆蓋的內容。
+											      		</p>
+											      		<h5 class="card-title"> Evaluation example </h5>
+											      		<div class="card-text">
+															1. 打開頁面，使用指標是否觸發附加內容。
+															<br>
+															2. 檢查附加內容保持可見，並指標是否可移到附加內容上與刪除附加內容。
+															<br>
+															3. 鍵盤焦點是否觸發附加內容。
+															<br>
+															4. 檢查附加內容保持可見，並可刪除附加內容。
+												      	</div>
+														<h5 class="card-title"> 預期結果 </h5>
+														<div class="card-text">
+															#2、#4為是。
+														</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- SC2141300E end -->
+									</div> <!-- Evaluation-1-4-13 accordion end -->
+									<hr>
+								</div>
+							</div> <!-- Criteria 1.4.13 end --> 
+
 						</div> <!-- Guideline 4 end -->
 					</div> <!-- Perceivable content end -->
 				</div> <!-- Principle 1 Perceivable end -->
