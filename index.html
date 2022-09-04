@@ -5953,7 +5953,7 @@
 
 											      		</div>
 												      </div>
-												  </div>
+												</div>
 											 </div>
 										</div> <!-- HM3140806E end -->
 									</div> <!-- Evaluation-1-4-8 accordion end -->
@@ -6064,13 +6064,584 @@
 												      	</div>
 													  </div>
 												 </div>
+												</div>
 											</div><!-- CS3140900E end -->
 										</div> <!-- Evaluation-1-4-9 accordion end -->
-										<hr>
-									</div>
+									<hr>
 								</div>
 							</div> <!-- Criteria 1.4.9 end -->
 
+							<div class="criteria-content accesibility-level-AA">
+									<h4 id="reflow"> 1.4.10 Reflow(Level AA)</h4>
+									<div class="div-to-filter-out">
+										<p>
+											內容可以在不失去資訊或功能性且無需進行二維捲動下呈現，如下列：
+											<br>
+											1. 內容垂直捲動的寬度相當於320個CSS像素；
+											<br>
+											2. 內容水平捲動的高度相當於256個CSS像素。
+											<br>
+											需要利用二維配置來提供部份內容使用或有意義呈現者除外。
+										</p>
+									<div class="inspection-collapse">
+										<button class="btn " 
+												type="button" 
+												disabled>
+											<i class="fa fa-chevron-right"></i>
+											No inspection code for criteria 1.4.10
+										</button>
+									</div>	<!-- Inspection-1-4-10 accordion end -->
+
+									<div class="evaluation-collapse">
+										<button class="btn" 
+												type="button" 
+												data-toggle="collapse" 
+												data-target="#evaluation-1-4-10-accordion" 
+												aria-expanded="true"> 
+											<i class="fa fa-chevron-right"></i>
+											Evaluation code for criteria 1.4.10
+										</button>
+									</div>
+									  <div class="accordion collapse evaluation-content" id="evaluation-1-4-10-accordion">
+										  <div class="card">
+										    <div class="card-header" id="CS2141000E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141000E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141000E
+											        </button>
+											    </h5>
+										    </div>
+
+										    <div id="CS2141000E" 
+										    	 class="collapse show" 
+										    	 aria-labelledby="CS2141000E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用媒體查詢(media query)和CSS網格(grid)重排網頁欄格
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															使用Flexbox Layouts讓布局區塊可根據流動排版後的需要，在螢幕上顯示布局區塊。創建在不同裝置和使用者偏好的不同縮放而可良好呈現的設計，必須遵守此方式。
+											      		</p>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 在能夠進行400％縮放的使用者代理中顯示網頁，並將視埠尺寸(以CSS像素為單位)設置為1280寬和1024高。
+															<br>
+															2. 放大400％。
+															<br>
+															3. 對於水平讀取的內容，檢查所有內容和功能是否可用而不進行水平滾動。
+															<br>
+															4. 對於垂直讀取的內容，檢查所有內容和功能是否可用而不進行垂直滾動。
+															<br>
+															注意：如果瀏覽器無法縮放到400％，則可以按比例縮小瀏覽器的寬度。例如，在300％縮放時，視埠的大小應為960px寬。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141000E end -->
+										<div class="card">
+										    <div class="card-header" id="CS2141001E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141001E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141001E
+											        </button>
+											    </h5>
+										    </div>
+
+										    <div id="CS2141001E" 
+										    	 class="collapse" 
+										    	 aria-labelledby="CS2141001E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用CSS彈性容器(flexbox)重排內容
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															使用Flexbox Layouts讓布局區塊可根據流動排版後的需要，在螢幕上顯示布局區塊。創建在不同裝置和使用者偏好的不同縮放而可良好呈現的設計，必須遵守此方式。
+											      		</p>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 在能夠進行400％縮放的使用者代理中顯示網頁，並將視埠尺寸(以CSS像素為單位)設置為1280寬和1024高。
+															<br>
+															2. 放大400％。
+															<br>
+															3. 對於水平讀取的內容，檢查所有內容和功能是否可用而不進行水平滾動。
+															<br>
+															4. 對於垂直讀取的內容，檢查所有內容和功能是否可用而不進行垂直滾動。
+															<br>
+															注意：如果瀏覽器無法縮放到400％，則可以按比例縮小瀏覽器的寬度。例如，在300％縮放時，視埠的大小應為960px寬。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141001E end -->
+										<div class="card">
+										    <div class="card-header" id="CS2141002E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141002E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141002E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="CS2141002E" 
+												 class="collapse" 
+										    	 aria-labelledby="CS2141002E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														針對長網址跟文字字符串可以進行重排
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															讓沒有空格的長字符集(如URL)在頁面縮放時不會破壞重排，必須遵守此方式。
+											      		</p>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															對於寬度超過320px的文字字符串，檢查：
+															<br>
+															1. 在能夠進行400％縮放的使用者代理中顯示網頁，並將視埠尺寸(以CSS像素為單位)設置為1280寬和1024高。
+															<br>
+															2. 放大400％。
+															<br>
+															3. 對於水平讀取的內容，檢查所有內容和功能是否可用而不進行水平滾動。
+															<br>
+															4. 對於垂直讀取的內容，檢查所有內容和功能是否可用而不進行垂直滾動。
+															<br>
+															注意：如果瀏覽器無法縮放到400％，則可以按比例縮小瀏覽器的寬度。例如，在300％縮放時，視埠的大小應為960px寬。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141002E end -->
+										<div class="card">
+										    <div class="card-header" id="CS2141003E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141003E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141003E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="CS2141003E" 
+												 class="collapse" 
+										    	 aria-labelledby="CS2141003E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用CSS寬度、最大寬度和彈性容器屬性調適標籤和輸入
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															因螢幕空間限制，標籤與輸入框水平並列，將改變為垂直對齊，必須遵守此方式。
+															<br>
+															調適標籤和輸入的基本方法：
+															<br>
+															使用flexbox屬性和特定視埠大小的媒體查詢(media query)定義佈局區域的大小，以便它們在可用空間中放大、縮小或換行並響應縮放級別；
+															將佈局區域放置在flexbox容器中作為一行相鄰的flexbox項目，這些項目可以根據需要換行，其方式與段落換行中的單詞大致相同。
+															定義標籤和輸入的width和max-width屬性，以便它們在可用空間中放大或縮小並響應縮放級別。
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															對於寬度超過320px的文字字符串，檢查：
+															<br>
+															1. 在能夠進行400％縮放的使用者代理中顯示網頁，並將視埠尺寸(以CSS像素為單位)設置為1280寬和1024高。
+															<br>
+															2. 放大400％。
+															<br>
+															3. 對於垂直滾動內容，所有標籤和輸入都適合其可用空間而無需水平滾動。
+															<br>
+															注意：如果瀏覽器無法縮放到400％，則可以按比例縮小瀏覽器的寬度。例如，在300％縮放時，視埠的大小應為960px寬。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141003E end -->
+										<div class="card">
+										    <div class="card-header" id="SC2141004E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#SC2141004E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		SC2141004E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="SC2141004E" 
+												 class="collapse" 
+										    	 aria-labelledby="SC2141004E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用與文字大小成比例的方式計算大小和位置
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															必須遵守以縮放文字大小的方式來計算元素的大小和位置。
+															<br>
+															使用JavaScript中的四個屬性可幫助確定元素的大小和位置：
+															<br>
+															offsetHeight(元素的高度，以像素為單位)
+															<br>
+															offsetWidth(元素的寬度，以像素為單位)
+															<br>
+															offsetLeft(元素到其父元素(offsetParent)左側的距離，以像素為單位)
+															<br>
+															offsetTop(元素到其父元素(offsetParent)的頂部的距離，以像素為單位)
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															對於寬度超過320px的文字字符串，檢查：
+															<br>
+															1. 打開一個隨著文字大小的改變而調整容器大小的頁面。
+															<br>
+															2. 使用瀏覽器的文字大小調整功能(不使用縮放功能)將文字大小放大至200％。
+															<br>
+															3. 檢查文字，以確保調整文字容器的大小可適應文字的大小。
+															<br>
+															4. 確保沒有因文字大小的增加而導致文字被“裁切”或消失。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- SC2141004E end -->
+										<div class="card">
+										    <div class="card-header" id="GN2141005E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#GN2141005E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		GN2141005E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="GN2141005E" 
+												 class="collapse" 
+										    	 aria-labelledby="GN2141005E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														在內容內提供選項以切換到不需要使用者水平滾動以閱讀文字行的佈局
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															網頁呈現內容若需使用水平滾動的佈局，可以在內容內提供選項，切換到不需要使用者水平滾動以閱讀文字行的佈局。
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 在全螢幕視窗上打開需要水平滾動的內容。
+															<br>
+															2. 檢查內容中是否有選項可以切換到不需要使用者水平滾動以讀取一行文字的佈局。
+															<br>
+															3. 啟動該選項。
+															<br>
+															4. 檢查確保不需要水平滾動即可讀取任何一行文字。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#2和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- GN2141005E end -->
+										<div class="card">
+										    <div class="card-header" id="CS2141006E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141006E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141006E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="CS2141006E" 
+												 class="collapse" 
+										    	 aria-labelledby="CS2141006E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用媒體查詢(media query)來解除粘滯的頁首/頁尾
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															在橫向使用裝置或桌面放大時，解除粘滯頁首和頁尾的內容，以可獲得更大的可見視圖。
+															<br>
+															解開粘滯頁首/頁尾的基本方法：
+															<br>
+															使用媒體查詢min-height屬性定義第一個粘滯區域，以便根據可用空間固定或取消固定；
+															<br>
+															使用特定視埠大小的媒體查詢min-width和max-height屬性定義其他粘滯區域，以便根據可用空間將其固定或取消固定，例如：對於平板電腦，取決於裝置的直向或橫向位置。
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 以直向模式在裝置/使用者代理上顯示內容。
+															<br>
+															2. 將方向更改為橫向。
+															<br>
+															3. 檢查粘滯的頁首和頁尾是否依據既有的媒體查詢設定而取消固定。
+															<br>
+															4. 在以1280x1024 CSS像素的起始視埠寬度的桌面/使用者代理上顯示內容。
+															<br>
+															5. 更改寬度和高度的視埠大小或使用瀏覽器的縮放功能。
+															<br>
+															6. 檢查粘滯的頁首和頁尾是否依據既有的媒體查詢設定而以特定尺寸取消固定。
+															<br>
+															注意：此測試依據測試的環境，可能有不同的實際模式或大小。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#6為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141006E end -->
+										<div class="card">
+										    <div class="card-header" id="CS2141007E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#CS2141007E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		CS2141007E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="CS2141007E" 
+												 class="collapse" 
+										    	 aria-labelledby="CS2141007E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用CSS最大寬度和高度容納圖像
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															響應式佈局的圖片須能適應可用的空間與保留圖片的原始尺寸，必須遵守使用CSS max-width和height屬性的方式。
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 在能夠進行400％縮放的使用者代理中顯示網頁，並將視埠尺寸(以CSS像素為單位)設置為1280寬和1024高。
+															<br>
+															2. 放大400％。
+															<br>
+															3. 對於水平讀取的內容，檢查所有圖片是否適合其可用空間而不進行水平滾動。
+															<br>
+															4. 對於垂直讀取的內容，請檢查所有圖片是否適合其可用空間而不進行垂直滾動。
+															<br>
+															注意：如果瀏覽器無法縮放到400％，則可以按比例縮小瀏覽器的寬度。例如，在300％縮放時，視埠的大小應為960px寬。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															檢查#3和#4為真。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- CS2141007E end -->
+										<div class="card">
+										    <div class="card-header" id="FA2141008E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#FA2141008E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		FA2141008E
+											        </button>
+											    </h5>
+										    </div>
+											<div id="FA2141008E" 
+												 class="collapse" 
+										    	 aria-labelledby="FA2141008E-header" 
+										    	 data-parent="#evaluation-1-4-10-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														由於內容消失並且在內容重排後不可用，而導致成功準則1.4.10失敗
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<div class="card-text">
+															當視埠寬度更改為320px導致視埠寬度更寬時可用的內容消失。
+														</div>
+											      		<h5 class="card-title"> 評量程序 </h5>
+											      		<div class="card-text">
+															1. 檢查電腦視埠寬度(例如1280px)上的可見內容元素。
+															<br>
+															2. 縮小或放大瀏覽器視窗以將視窗寬度設置為320px，以使視窗寬度現在為320px(當以1280px視窗寬度開始由100％瀏覽器縮放時，可透過放大至400％完成本項程序)。
+															<br>
+															3. 對於視窗寬度為320px時未提供的每個內容元素，請檢查是否有一種方法可以透過小部件，彈出視窗或指向其他視圖的鏈結來獲得相同或等效的內容。
+												      	</div>
+											      		<h5 class="card-title"> 預期結果 </h5>
+											      		<div class="card-text">
+															如果#3為否，則符合失敗條件，此內容未通過成功準則。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- FA2141008E end -->
+									</div> <!-- Evaluation-1-4-10 accordion end -->
+									<hr>
+								</div>
+							</div> <!-- Criteria 1.4.10 end --> 
+							<div class="criteria-content accesibility-level-AA">
+									<h4 id="non-text-contrast"> 1.4.11 Non-text Contrast(Level AA)</h4>
+									<div class="div-to-filter-out">
+										<p>
+											下列內容的視覺呈現與相鄰顏色的對比度至少為3:1：
+											<br>
+											1. 使用者介面元件：使用者介面元件和狀態識別所需的視覺資訊，除非是閒置元件或元件外觀由使用者代理確定且未經由網頁作者修改的情況；
+											<br>
+											2. 圖形物件：理解內容所需要的圖形部分，除非是圖形的特定呈現對於資訊傳達為必要。
+										</p>
+									<div class="inspection-collapse">
+										<button class="btn " 
+												type="button" 
+												disabled>
+											<i class="fa fa-chevron-right"></i>
+											No inspection code for criteria 1.4.11
+										</button>
+									</div>	<!-- Inspection-1-4-11 accordion end -->
+
+									<div class="evaluation-collapse">
+										<button class="btn" 
+												type="button" 
+												data-toggle="collapse" 
+												data-target="#evaluation-1-4-11-accordion" 
+												aria-expanded="true"> 
+											<i class="fa fa-chevron-right"></i>
+											Evaluation code for criteria 1.4.11
+										</button>
+									</div>
+									  <div class="accordion collapse evaluation-content" id="evaluation-1-4-11-accordion">
+										  <div class="card">
+										    <div class="card-header" id="GN2141001E-header">
+										    	<h5>
+											        <button class="btn btn-block text-left" 
+											        		type="button" 
+											        		data-toggle="collapse" 
+											        		data-target="#GN2141001E" 
+											        		aria-expanded="true" 
+											        		aria-controls="collapseOne">
+											        		GN2141001E
+											        </button>
+											    </h5>
+										    </div>
+
+										    <div id="GN2141001E" 
+										    	 class="collapse show" 
+										    	 aria-labelledby="GN2141001E-header" 
+										    	 data-parent="#evaluation-1-4-11-accordion">
+										    	 <div class="card-body">
+										    	 	<div class="criteria-information">
+														使用網頁作者設定的高可視焦點指示器
+											    	 </div>
+										    	 </div>
+										    	 <div class="card">
+										    	 	<div class="card-body evaluation-detail">
+											      		<h5 class="card-title"> Evaluation rule </h5>
+											      		<p class="card-text">
+															當使用者使用滑鼠、Tab鍵、箭頭方向鍵、鍵盤快捷鍵或任何其他方法將焦點放在某個元素上時，該應用程序會使用高度對比的顏色，或較粗的顏色，以及其他視覺指示器(例如發光)，使焦點更加清晰可見。
+											      		</p>
+											      		<h5 class="card-title"> Evaluation example </h5>
+											      		<div class="card-text">
+															1. 使用鍵盤將焦點放在頁面中的每個可聚焦的使用者介面元素上。
+															<br>
+															2. 檢查是否有清晰可見的焦點指示器。
+															<br>
+															3. 檢查焦點指示器的區域至少有1 CSS像素圍繞該元素。
+															<br>
+															4. 檢查指示器在聚焦與未聚焦狀態之間對比度的改變，指示器的區域是否具有3:1對比值。
+															<br>
+															5. 如果焦點指示器與相鄰的顏色未達3:1對比值，檢查指示器邊線厚度是否有2 CSS像素。
+												      	</div>
+													  </div>
+												 </div>
+											</div>
+										</div><!-- GN2141001E end -->
+									</div> <!-- Evaluation-1-4-11 accordion end -->
+									<hr>
+								</div>
+							</div> 
 						</div> <!-- Guideline 4 end -->
 					</div> <!-- Perceivable content end -->
 				</div> <!-- Principle 1 Perceivable end -->
