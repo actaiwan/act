@@ -7223,7 +7223,6 @@
 										</button>
 									</div>
 									  <div class="accordion collapse evaluation-content" id="evaluation-1-4-13-accordion">
-										  <!-- FA2141301E end -->
 										<div class="card">
 										    <div class="card-header" id="SC2141300E-header">
 										    	<h5>
@@ -7329,120 +7328,347 @@
 					</div>
 					<div class="operable-content">
 						<div class="guideline-header">
-							<h3 class="anchor" id="keyboard-accessible"> 指引 5 鍵盤可操作 </h3>
+							<h3 class="anchor" id="keyboard-accessible"> 指引 2.1 鍵盤可操作 </h3>
 							<p>
-								Make all functionality available from a keyboard.
+								讓所有的功能都能透過鍵盤使用
 							</p>
 						</div>
 						<div class="guideline-content">
 							<div class="criteria-content accesibility-level-A">
-								<h4 id="keyboard"> 5.1 Keyboard </h4>
+								<h4 id="keyboard"> 2.1.1 Keyboard </h4>
 								<p>
-									All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
+									內容的所有功能都能透過鍵盤介面來操作，而且不能額外要求在限定時間內完成按鍵操作。特殊目的的網頁(例如遊戲網頁要求在特定時間內完成指定操作)不在此限。
 								</p>
 								<div class="inspection-collapse">
 									<button class="btn " 
 											type="button" 
 											disabled>
 										<i class="fa fa-chevron-right"></i>
-								    		No inspection code for 5.1
+								    		No inspection code for 2.1.1
 									</button>
-								</div> <!-- Inspection-5-1 accordion end -->
+								</div> <!-- Inspection-2-1-1 accordion end -->
 
 								<div class="evaluation-collapse">
 									<button class="btn" 
 											type="button" 
 											data-toggle="collapse" 
-											data-target="#evaluation-5-1-accordion" 
+											data-target="#evaluation-2-1-1-accordion" 
 											aria-expanded="true"> 
 										<i class="fa fa-chevron-right"></i>
-										Evaluation code for criteria 5.1
+										Evaluation code for criteria 2.1.1
 									</button>
 								</div>
-								  <div class="accordion collapse evaluation-content" id="evaluation-5-1-accordion">
-									  <div class="card">
-									    <div class="card-header">
-									    	<h5>
-										        <button class="btn btn-block text-left" 
-										        		type="button" 
-										        		data-toggle="collapse" 
-										        		data-target="#EV1050100" 
-										        		aria-expanded="true" 
-										        		aria-controls="collapseOne">
-										        		EV1050100：提供由鍵盤觸發的事件處理程式
-										        </button>
-										    </h5>
-									    </div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-1-1-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1210100E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1210100E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1210100E：提供由鍵盤觸發的事件處理程式
+												</button>
+											</h5>
+										</div>
 
-									    <div id="EV1050100" 
-									    	 class="collapse" 
-									    	 aria-labelledby="headingOne" 
-									    	 data-parent="#evaluation-5-1-accordion">
-									    	 <div class="card-body">
-										        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-										      </div>
-										      <div class="card">
-										      	<div class="card-body evaluation-detail"> 
-										      		<h5 class="card-title"> Evaluation rule </h5> 
-										      		<p class="card-text">
-										      			任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此規範。
-										      		</p>
-										      		<h5 class="card-title"> Evaluation example </h5>
-										      		<p class="card-text">
-										      		</p>
-										      	</div>
-										      </div>
-									    </div>
-									  </div>
-									  <div class="card">
-									    <div class="card-header" id="headingOne">
-									    	<h5>
-										        <button class="btn btn-block text-left" 
-										        		type="button" 
-										        		data-toggle="collapse" 
-										        		data-target="#EV1050101" 
-										        		aria-expanded="true" 
-										        		aria-controls="collapseOne">
-										        		EV1050101：確認所有功能都能透過鍵盤介面來操作。
-										        </button>
-										    </h5>
-									    </div>
+										<div id="GN1210100E" 
+											class="collapse show" 
+											aria-labelledby="GN1210100E-header" 
+											data-parent="#evaluation-2-1-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此規範。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 用chrome打開檔案，以下兩個連結既可以用滑鼠點擊也可以用鍵盤去操作。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210100E-1.jpg">
+														<p>
+															2. 這裡使用tab鍵可取代滑鼠點擊的功能，如此無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210100E-2.jpg">
+														<p>
+															3. 檢視原始碼，此原始碼可呼叫javascript內的函式來執行以上所需的功能。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210100E-3.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1210100E end -->
+									<div class="card">
+										<div class="card-header" id="GN1210101E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1210101E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1210101E：確認所有功能都能透過鍵盤介面來操作。
+												</button>
+											</h5>
+										</div>
 
-									    <div id="EV1050101" 
-									    	 class="collapse" 
-									    	 aria-labelledby="headingOne" 
-									    	 data-parent="#evaluation-5-1-accordion">
-										      <div class="card-body">
-										        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-										      </div>
-									    </div>
-									</div>
-									  <div class="card">
-									    <div class="card-header" id="headingOne">
-									    	<h5>
-										        <button class="btn btn-block text-left" 
-										        		type="button" 
-										        		data-toggle="collapse" 
-										        		data-target="#EV1050102" 
-										        		aria-expanded="true" 
-										        		aria-controls="collapseOne">
-										        		HM1110102E：圖片組件需有替代文字屬性
-										        </button>
-										    </h5>
-									    </div>
-									    <div id="EV1050102" 
-									    	 class="collapse" 
-									    	 aria-labelledby="headingOne" 
-									    	 data-parent="#evaluation-1-1-1-accordion">
-										      <div class="card-body">
-										        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
-										      </div>
-									    </div>
-									   </div>
-									</div> <!-- Evaluation-5-1 accordion end -->
+										<div id="GN1210101E" 
+											class="collapse" 
+											aria-labelledby="GN1210101E-header" 
+											data-parent="#evaluation-2-1-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此規範。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 使用tab鍵可取代滑鼠操作的功能，如此無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-1.jpg">
+														<p>
+															2. 按下tab鍵會依序跑完所有需要填寫的內容中，不會跳到其他內容。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-2.jpg">
+														<p>
+															3. 使用鍵盤上的上下左右鍵即可選擇下拉列表的選項
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-3.jpg">
+														<p>
+															4. 檢視原始碼。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-4.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1210101E end -->
+								</div> <!-- Evaluation-2-1-1 accordion end -->
 								<hr>
-							</div><!-- Criteria-5-1 end -->
-						</div><!-- Guideline 5 Keyboard Accessible end -->
+							</div><!-- Criteria-2-1-1 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="no-keyboard-trap"> 2.1.2 No Keyboard Trap </h4>
+								<p>
+									如果可以使用鍵盤介面，將鍵盤焦點移至頁面中的某個元件，則也要能僅用鍵盤介面就把焦點移開；
+									如果移開焦點需要用到普通的方向鍵、跳位鍵以外的按鍵，或其他標準的離開方法，則需告知使用者如何操作。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.1.2
+									</button>
+								</div> <!-- Inspection-2-1-2 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-1-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.1.2
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-1-2-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1210200E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1210200E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1210200E：確認使用者不會困在內容中
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1210200E" 
+											class="collapse show" 
+											aria-labelledby="GN1210200E-header" 
+											data-parent="#evaluation-2-1-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何網頁皆能以此做測試。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 按tab鍵，能依序瀏覽所有內容。以此範例為例，按下tab鍵會依序跑完所有需要填寫的內容中，不會跳到其他內容。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210200E-1.jpg">
+														<p>
+															註：若要使用者困在其他內容中，可選擇以下鍵入來取消焦點：Tab、Shift + Tab、Esc、Shift + F10、Alt + Enter、Ctrl + I。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1210200E end -->
+								</div> <!-- Evaluation-2-1-2 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-1-2 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="keyboard-no-exception"> 2.1.3 Keyboard (No exception) </h4>
+								<p>
+									內容的所有功能都能透過鍵盤介面來操作，而且沒有額外的特定按鍵計時需求
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.1.3
+									</button>
+								</div> <!-- Inspection-2-1-3 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-1-3-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.1.3
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-1-3-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3210300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3210300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3210300E：僅提供由鍵盤觸發的事件處理程式
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3210300E" 
+											class="collapse show" 
+											aria-labelledby="GN3210300E-header" 
+											data-parent="#evaluation-2-1-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 用chrome打開檔案，以下兩個連結既可以用滑鼠點擊也可以用鍵盤去操作。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-1.jpg">
+														<p>
+															2. 這裡使用tab鍵可取代滑鼠點擊的功能，如此無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-2.jpg">
+														<p>
+															3. 檢視原始碼，此原始碼可呼叫javascript內的函式來執行以上所需的功能。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-3.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3210300E end -->
+								</div> <!-- Evaluation-2-1-3 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-1-3 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="character-key-shortcut"> 2.1.4 Character Key Shortcut </h4>
+								<p>
+									如果在內容中執行僅使用字母(包括大寫和小寫字母)、標點、數字或符號字符的鍵盤快捷鍵，則至少應滿足下列條件之一：
+									<br>
+									• 關閉：可關閉快捷鍵的機制；
+									<br>
+									• 重新對應：可使用一個或多個非打印的鍵盤字元(例如Ctrl、Alt等)重新對應快捷鍵的機制；
+									<br>
+									• 僅在焦點上啟動：使用者介面元件的鍵盤快捷鍵只有在該元件具有焦點時才會啟動。
+									<br>
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.1.4
+									</button>
+								</div> <!-- Inspection-2-1-4 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-1-4-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.1.4
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-1-4-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3210300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3210300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3210300E：僅提供由鍵盤觸發的事件處理程式
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3210300E" 
+											class="collapse show" 
+											aria-labelledby="GN3210300E-header" 
+											data-parent="#evaluation-2-1-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 用chrome打開檔案，以下兩個連結既可以用滑鼠點擊也可以用鍵盤去操作。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-1.jpg">
+														<p>
+															2. 這裡使用tab鍵可取代滑鼠點擊的功能，如此無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-2.jpg">
+														<p>
+															3. 檢視原始碼，此原始碼可呼叫javascript內的函式來執行以上所需的功能。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3210300E-3.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3210300E end -->
+								</div> <!-- Evaluation-2-1-4 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-1-4 end -->
+						</div><!-- Guideline 2-1 Keyboard Accessible end -->
 					</div> <!-- Operable content end -->
 				</div>
 				<div class="understandable">
