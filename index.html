@@ -220,6 +220,9 @@
 									<li class="criteria-sidebar">
 										<a href="#keyboard-no-exception"> 2.1.3 Keyboard (No Exception) </a>
 									</li>
+									<li class="criteria-sidebar">
+										<a href="#character-key-shortcut"> 2.1.4 Character Key Shortcut </a>
+									</li>
 								</ul>
 							</li>
 							<li class="guideline-sidebar">
@@ -239,6 +242,9 @@
 									</li>
 									<li class="criteria-sidebar">
 										<a href="#re-authenticating"> 2.2.5 Re-authenticating </a>
+									</li>
+									<li class="criteria-sidebar">
+										<a href="timeouts"> 2.2.6 Timeouts </a>
 									</li>
 								</ul>
 							</li>
@@ -7623,52 +7629,752 @@
 								</div>
 								<div class="accordion collapse evaluation-content" id="evaluation-2-1-4-accordion">
 									<div class="card"> 
-										<div class="card-header" id="GN3210300E-header">
+										<div class="card-header" id="GN1210400E-header">
 											<h5>
 												<button class="btn btn-block text-left" 
 														type="button" 
 														data-toggle="collapse" 
-														data-target="#GN3210300E" 
+														data-target="#GN1210400E" 
 														aria-expanded="true" 
 														aria-controls="collapseOne">
-														GN3210300E：僅提供由鍵盤觸發的事件處理程式
+														GN1210400E：提供一種機制，允許使用者重新對應或關閉字符鍵快捷方式
 												</button>
 											</h5>
 										</div>
 
-										<div id="GN3210300E" 
+										<div id="GN1210400E" 
 											class="collapse show" 
-											aria-labelledby="GN3210300E-header" 
+											aria-labelledby="GN1210400E-header" 
 											data-parent="#evaluation-2-1-4-accordion">
 											<div class="card">
 												<div class="card-body evaluation-detail"> 
 													<h5 class="card-title"> Evaluation rule </h5> 
 													<p class="card-text">
-														任何事件無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成，都必須要遵守此指引。
+														為防止意外啟動，字符鍵組成的快捷方式，必須允許使用者關閉或重新配置。
+														<br>
+														注意：如果僅在特定使用者介面組件具有焦點時才啟動鍵盤快捷鍵，則無需提供替代機制。
 													</p>
 													<h5 class="card-title"> Evaluation example </h5>
 													<p class="card-text">
-														<p>
-															1. 用chrome打開檔案，以下兩個連結既可以用滑鼠點擊也可以用鍵盤去操作。
-														</p>
-														<img src="./images/evaluation_screenshot/GN3210300E-1.jpg">
-														<p>
-															2. 這裡使用tab鍵可取代滑鼠點擊的功能，如此無論是鍵盤還是滑鼠的事件皆可由鍵盤來完成。
-														</p>
-														<img src="./images/evaluation_screenshot/GN3210300E-2.jpg">
-														<p>
-															3. 檢視原始碼，此原始碼可呼叫javascript內的函式來執行以上所需的功能。
-														</p>
-														<img src="./images/evaluation_screenshot/GN3210300E-3.jpg">
+														對於每個字符鍵快捷方式：
+														<br>
+														1. 確定使用者是否具有關閉快捷方式或將其重新對應到包含一個或多個修飾鍵的組合之能力。
 													</p>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#1為是。
+													</div>
 												</div>
 											</div>
 										</div>
-									</div> <!-- GN3210300E end -->
+									</div> <!-- GN1210400E end -->
+									<div class="card"> 
+										<div class="card-header" id="FA1210401E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA1210401E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA1210401E：由於實作的快捷鍵無法關閉或重新對應，而導致成功準則2.1.4失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA1210401E" 
+											class="collapse" 
+											aria-labelledby="FA1210401E-header" 
+											data-parent="#evaluation-2-1-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														當僅使用字符鍵實現鍵盤快捷鍵時，而無法讓使用者關閉或重新對應，則失敗。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														如果該網站未提供關閉或重新對應鍵盤快捷鍵的設定，則：
+														<br>
+														1. 如果下載頁面將焦點設置在輸入框，單擊頁面的空白部分以確保沒有焦點在輸入上。
+														<br>
+														2. 按壓由網頁作者標識為快捷鍵的按鍵，或者如果沒有作者提供的說明資訊，則按鍵盤所有打印的字符鍵(即所有數字、字母、符號和標點符號)。勿按下非打印修飾鍵和控制鍵，例如Ctrl、Alt、Esc、箭頭鍵和功能鍵F1-F12(如果有)，空格、Enter、返回、Tab和Delete鍵亦同。
+														<br>
+														3. 按住Shift鍵，然後再次按相同的鍵。
+														<br>
+														4. 檢查功能是否被按鍵觸發。
+													</p>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#4為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA1210401E end -->
 								</div> <!-- Evaluation-2-1-4 accordion end -->
 								<hr>
 							</div><!-- Criteria-2-1-4 end -->
 						</div><!-- Guideline 2-1 Keyboard Accessible end -->
+						<div class="guideline-header">
+							<h3 class="anchor" id="enough-time"> 指引 2.2 充足時間 </h3>
+							<p>
+								提供使用者充分的時間來閱讀及使用內容
+							</p>
+						</div>
+						<div class="guideline-content">
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="timing-adjustable"> 2.2.1 Timing Adjustable </h4>
+								<p>
+									對於每一個由內容所設定的時間限制來說，下列各款至少得做到其中一項：
+									• 使用者遇上時間限制之前就能把它關掉。
+									<br>
+									• 使用者遇上時間限制之前就能加以調整，而且可調整的範圍要很大，至少是預設設定的10倍以上。
+									<br>
+									• 計時截止之前先警告使用者，並保留至少20秒的時間，讓使用者用簡單的動作(例如「按空白鍵」)來延長時限，且使用者至少能延長時限10次以上。
+									<br>
+									• 當時間限制為即時事件(例如拍賣)中所需要的部份，而且不可能有任何替代的時限時，可不允許計時調整。
+									<br>
+									• 當時限為必要，且延長時限會使得活動無效時，可不允許計時調整。
+									<br>
+									• 當時限比20小時還長時，可不允許計時調整。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.1
+									</button>
+								</div> <!-- Inspection-2-2-1 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-2-1-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.2.1
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-2-1-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1220100E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220100E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220100E：在多頁表單的第一頁提供一個核選框，讓使用者可以要求較寬鬆的階段時間限制，或者完全不要有階段時間限制
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1220100E" 
+											class="collapse show" 
+											aria-labelledby="GN1220100E-header" 
+											data-parent="#evaluation-2-2-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														網頁中有使用到限時填寫的多頁表單，需提供可延長填寫時限的機制。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 檢查一個含有表單填寫的網頁中，是否有時間限制，若有，則需提供增加填寫時間的選擇。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220100E-1.jpg">
+														<p>
+															2. 如果有一些選項被選中時，有另外表格需要填寫時，則需要增加額外時間。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220100E-2.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220100E end -->
+									<div class="card">
+										<div class="card-header" id="GN1210101E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1210101E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1210101E： 提供能讓使用者將時間限制設為預設時間限制十倍，或完全關閉時間限制的方法
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1210101E" 
+											class="collapse" 
+											aria-labelledby="GN1210101E-header" 
+											data-parent="#evaluation-2-2-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														網頁中有使用到限時填寫的多頁表單，需提供可延長填寫時限的機制。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 檢查網頁表單填寫是否具有時間限制，並將預設時間更改為原先的10倍。以下範例原先預設時間回10秒，選擇增加10倍後，預設時間變成100秒。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-1.jpg">
+														<p>
+															2. 網頁表單填寫若有時間限制，則有一個選項能取消時間限制。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1210101E-2.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1210101E end -->
+								</div> <!-- Evaluation-2-2-1 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-2-1 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="pause-stop-hide"> 2.2.2 Pause, Stop, Hide </h4>
+								<p>
+									對於會移動、閃動、捲動或自動更新的資訊來說，下列各款全部都要做到：
+									<br>
+									• 對於任何會移動、閃動或捲動，且為(1)會自動開始、(2)維持超過5秒鐘、(3)與其他內容平行呈現的資訊來說，除非這種移動、閃動或捲動乃是活動的1部分且不可或缺，否則就要有個機制來讓使用者可以暫停、中止或加以隱藏。
+									<br>
+									• 對於任何會自動更新，且為(1)會自動開始、(2)與其他內容平行呈現的資訊來說，除非這種自動更新是內容的1部分且不可或缺，否則就要有個機制來讓使用者可以暫停、中止或加以隱藏，或能控制更新的頻率。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.2
+									</button>
+								</div> <!-- Inspection-2-2-2 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-2-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.2.2
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-2-2-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1220200E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220200E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220200E：讓內容能加以暫停，並可從暫停處重新開始
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1220200E" 
+											class="collapse show" 
+											aria-labelledby="GN1220200E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														網頁上若有動態物件，如動畫或影片，則須符合此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 以youtube影片為例，當影片正播放時，以youtube所設之暫停方式(1.直接用滑鼠點影片或2.點影片左下方暫停鍵或3.按空白鍵)讓影片停下來。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220200E-1.jpg">
+														<p>
+															2. 觀察以確定影片已暫停且並沒有從頭開始。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220200E-2.jpg">
+														<p>
+															3. 接著使用youtube所設之繼續播放影片方式(直接用滑鼠點影片或2.點影片左下方播放鍵或3.按空白鍵)讓影片繼續播放。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220200E-3.jpg">
+														<p>
+															4. 觀察以確定影片是從剛才暫停處繼續播放。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220200E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1220201E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220201E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220201E：建立閃動少於5秒鐘的內容
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1220201E" 
+											class="collapse" 
+											aria-labelledby="GN1220201E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														網頁上任何會自動閃動的物件內容如flash動畫，必須符合此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 找出網頁上任何會閃動的內容。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220201E-1.jpg">
+														<p>
+															2. 確保此動態閃動必須短於5秒內(包括閃動的間隔及短影片全部播放的總時間)。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220201E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1220202E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220202E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220202E：在網頁內使用可以停止移動、閃動、自動更新等內容的控制元件												</button>
+											</h5>
+										</div>
+
+										<div id="GN1220202E" 
+											class="collapse" 
+											aria-labelledby="GN1220202E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														網頁上任何會自動播放的閃動或音效等，必須符合此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 以無礙e網為例，首頁上有自動播放解說功能，觀察此物件，找到可以控制其暫停的方法(按player左下角的暫停鈕)。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220202E-1.jpg">
+														<p>
+															2. 按下暫停鈕。確認播放內容已被暫停，以此例即聲音暫停播放。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220202E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1220203E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220203E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220203E：使用能由使用者代理關閉閃動內容的科技
+											</h5>
+										</div>
+
+										<div id="GN1220203E" 
+											class="collapse" 
+											aria-labelledby="GN1220203E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML無障礙的網頁，都必須要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220203E-1.jpg">
+														<p>
+															2. 檢查是否在Javascript裡加入按鍵ESC功能，當按下ESC按鍵即可關閉動態圖片閃爍。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220203E-2.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220203E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1220204E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220204E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220204E：提供鏈結、按鈕，或任何可以不閃動內容即重新載入頁面的機制
+											</h5>
+										</div>
+
+										<div id="GN1220204E" 
+											class="collapse" 
+											aria-labelledby="GN1220204E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML無障礙的網頁，都必須要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220204E-1.jpg">
+														<p>
+															2. 檢查是否在加入按鍵功能，語法onclick="javascript:window.location.reload()"當滑鼠按下按鍵即重新整理頁面，且停止閃爍內容。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220204E-2.jpg">
+														<p>
+															3. 測試結果，閃爍內容停止，而且原本網頁的意義也能如實表達。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1220204E-3.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220204E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1220205E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1220205E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1220205E：動畫GIF圖檔之閃動時間不超過五秒鐘
+											</h5>
+										</div>
+
+										<div id="GN1220205E" 
+											class="collapse" 
+											aria-labelledby="GN1220205E-header" 
+											data-parent="#evaluation-2-2-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														若有gif圖檔，則動畫的持續時間應該小於或等於5秒。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 在網頁上發現「動畫」。
+														</p>
+														<p>
+															2. 確認是否為GIF動畫及是否閃爍。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1220205E end -->
+								</div> <!-- Evaluation-2-2-2 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-2-2 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="no-timing"> 2.2.3 No Timing </h4>
+								<p>
+									內容播放時不設時間限制，除非是在非互動的同步媒體或即時事件中，否則計時並非事件或內容所呈現的活動中，具有必要性的部份。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.3
+									</button>
+								</div> <!-- Inspection-2-2-3 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-2-3-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.2.3
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-2-3-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3220300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3220300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3220300E：讓使用者可以在沒有任何時間限制的情況下完成活動
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3220300E" 
+											class="collapse show" 
+											aria-labelledby="GN3220300E-header" 
+											data-parent="#evaluation-2-2-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														所有網頁中不限制時間讓使用者完成網頁上的互動功能都必須遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 確定是否有任何時間限制的互動功能(客戶端和伺服端)。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3220300E end -->
+								</div> <!-- Evaluation-2-2-3 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-2-3 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="interruptions"> 2.2.4 Interruptions </h4>
+								<p>
+									內容播放時使用者要能延遲或抑制中斷，除非中斷關乎緊急狀況。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.4
+									</button>
+								</div> <!-- Inspection-2-2-4 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-2-4-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.2.4
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-2-4-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3220400E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3220400E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3220400E：提供可以延遲任何內容更新的機制
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3220400E" 
+											class="collapse show" 
+											aria-labelledby="GN3220400E-header" 
+											data-parent="#evaluation-2-2-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														提供給使用者自行調整系統刷新的頻率需求(例如，股票頁面)。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 開啟網頁，審查內容是否為可以更新資訊。
+														</p>
+														<p>
+															2. 如果是依照以下範例提供更新機制。
+														</p>
+														<img src="./images/evaluation_screenshot/GN3220400E-1.jpg">
+														<p>
+															3. 如圖提供更新機制。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3220400E end -->
+								</div> <!-- Evaluation-2-2-4 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-2-4 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="re-authenticating"> 2.2.5 Re-authenicating </h4>
+								<p>
+									內容播放時使用者要能延遲或抑制中斷，除非中斷關乎緊急狀況。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.5
+									</button>
+								</div> <!-- Inspection-2-2-5 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-2-5-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.2.5
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-2-5-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3220500E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3220500E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3220500E：儲存資料以便使用者重新認證後仍可使用
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3220500E" 
+											class="collapse show" 
+											aria-labelledby="GN3220500E-header" 
+											data-parent="#evaluation-2-2-5-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														需要用戶身份驗證的網站，在使用者在登入後填寫的表單(form)，萬一session時間超過設定時間而被登出，則使用者再次登入，其編輯的表單需可儲存先前的編輯內容。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														1. 登錄並開始計時。
+														<br>
+														2. 允許SESSION超時。
+														<br>
+														3. 提交內容。
+														<br>
+														4. 重新認證。
+														<br>
+														5. 檢查此過程可以繼續且沒有遺失先前編輯的內容，包括原始資料和經過重新驗證所作的任何選擇。
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3220500E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN3220501E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3220501E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3220501E：在重新認證的頁面上將使用者資料編碼為隱藏或加密的資料
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3220501E" 
+											class="collapse" 
+											aria-labelledby="GN3220501E-header" 
+											data-parent="#evaluation-2-2-5-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														如果使用者在輸入表單的頁面逾時，先前編輯過的資料要被隱藏或是加密。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														1. 登錄並開始計時。
+														<br>
+														2. 允許SESSION超時。
+														<br>
+														3. 提交內容。
+														<br>
+														4. 重新認證。
+														<br>
+														5. 檢查此過程可以繼續且沒有遺失先前編輯的內容，包括原始資料和經過重新驗證所作的任何選擇。
+														<br>
+														6. 檢查用來提交步驟3中的內容沒有被儲存在伺服器上的程序。(注意：這需要技術方面的知識和使用的功能來實現此技術。)
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3220501E end -->
+								</div> <!-- Evaluation-2-2-5 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-2-5 end --> 
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="timeouts"> 2.2.6 Timeouts </h4>
+								<p>
+									警告使用者可能導致資料遺失的「使用者無活動狀態」的持續時間，除非在使用者不執行任何操作時，能將資料保存超過20小時。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.2.6
+									</button>
+								</div> <!-- Inspection-2-2-6 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No evaluation code for 2.2.6
+									</button>
+								</div> <!-- Evaluation-2-2-6 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-2-6 end --> 
+						</div> <!-- Guideline 2-2 Enough Time end -->
 					</div> <!-- Operable content end -->
 				</div>
 				<div class="understandable">
