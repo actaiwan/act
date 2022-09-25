@@ -8375,6 +8375,276 @@
 								<hr>
 							</div> <!-- Criteria-2-2-6 end --> 
 						</div> <!-- Guideline 2-2 Enough Time end -->
+						<div class="guideline-header">
+							<h3 class="anchor" id="seizures-and-physical-reactions"> 指引 2.3 預防痙攣和身體不適反應 </h3>
+							<p>
+								不要用任何已知會引發痙攣或身體反應的方式來設計內容
+							</p>
+						</div>
+						<div class="guideline-content">
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="three-flashes-or-below-threshold"> 2.3.1 閃爍三次或低於閾值 (AAA) </h4>
+								<p>
+									網頁上不可含有任何一個元件，其在任何1秒鐘之內，會閃爍超過3次，或者閃爍低於一般閃爍以及紅閃爍閾值。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.3.1
+									</button>
+								</div> <!-- Inspection-2-3-1 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-3-1-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.3.1
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-3-1-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1230100E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1230100E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1230100E：使用工具來確認內容不會超出一般閃爍閾值或紅閃爍閾值，或者確認在任何一秒鐘的週期內，沒有任何內容元素會閃爍超過三次												</button>
+											</h5>
+										</div>
+
+										<div id="GN1230100E" 
+											class="collapse show" 
+											aria-labelledby="GN1230100E-header" 
+											data-parent="#evaluation-2-3-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML在檢驗某網站時，若需確認沒有任何網頁內容於任一秒鐘內有閃爍超過三次的情形，須遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 下載光敏性癲癇分析工具「PEAT 軟體」，軟體載點於https://trace.wisc.edu/peat/#download，此軟體可以幫助作者確定其網頁內容的動畫或視頻等是否有可能引起癲癇發作(如網頁內容標籤閃爍超過三次的刺激性)。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230100E-1.jpg">
+														<p>
+															2. 下載「PEAT 軟體」後，點選選單列中的Capture→Start Capture，此選項可以捕捉網頁內容的畫面。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230100E-2.jpg">
+														<p>
+															3. 點選第一個選項start capturing after a new window becomes the active window. 並選擇捕捉網頁後的存檔位置(Avi File to Capture to) 。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230100E-3.jpg">
+														<p>
+															4. 點選一下要捕捉的網頁畫面，此時會有彈跳視窗詢問是否要捕捉此網頁，案確定後，即可開始錄製網頁畫面，要停止錄製，請按停止按鈕。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230100E-4.jpg">
+														<p>
+															5. 錄製好此網頁後可以開始進行分析，此時可以點選#進行網頁的分析(分析時Show warning需打勾)，此軟體會分析網頁中的光敏性危險提供警告訊息，以避免癲的癇發生(下圖為偵測到在任何一秒鐘內，有閃爍超過三次的警告)，以下範例Show warning 為0表示此網頁不會出現光敏性危險。
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230100E-5.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1230100E end -->
+									<div class="card">
+										<div class="card-header" id="GN1230101E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1230101E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1230101E： 能讓閃爍區域保持夠小
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1230101E" 
+											class="collapse" 
+											aria-labelledby="GN1230101E-header" 
+											data-parent="#evaluation-2-3-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														適用於一般的web內容，能夠在特殊屏幕中能夠使閃爍區域保持夠小時，須遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 檢查畫面在任何時間中是否只有一個區域在閃爍。
+														</p>
+														<p>
+															2. 檢查閃爍的區域其面積小於最小安全區域。最小安全區域指的是：
+															Web內容能使閃爍區域保持夠小：最普遍的web顯示尺寸為1024 x 768，對角線約15〜17英寸，如果以距離(22-26英寸)且以10度角觀看的方式，觀看時視野將小於中央屏幕的25％，可見區為一個面積約341×256像素，此為最小的安全區域。
+															所使用的屏幕(如大廳中所使用的顯示器)能使閃爍區域保持夠小。請參考: https://www.w3.org/TR/WCAG20-TECHS/G176.html
+														</p>
+														<p>
+															3. 以下範例為：
+															<br>
+															web顯示尺寸為1024 x 768，如果以觀看距離(22-26英寸)且以10度的視野的方式，視野將小於中央屏幕的25％，可見區為一個面積約341×256像素，這可以為最小的安全區域(紅色框起來的地方)
+														</p>
+														<img src="./images/evaluation_screenshot/GN1230101E-1.jpg">
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1230101E end -->
+								</div> <!-- Evaluation-2-3-1 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-3-1 end -->
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="three-flashes"> 2.3.2 閃爍三次 (AAA) </h4>
+								<p>
+									網頁上不可含有任何一個元件，其在任何1秒鐘之內，會閃爍超過3次。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.3.2
+									</button>
+								</div> <!-- Inspection-2-3-2 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-3-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.3.2
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-3-2-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3230200E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3230200E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3230200E：確認在任何一秒鐘的週期內，沒有任何內容元素會閃爍超過三次
+												</button>
+											</h5>
+										</div>
+										<div class="card-body">
+											<h5 class="author-note-header"> 
+												Author's Note
+											</h5>
+											<div class="author-note">
+												在下面的檢測中，要檢查1秒期間結束後的亮暗狀態是因為在WCGA規範中有提到所謂的「3.5次閃爍」或是「7次亮暗轉換」，比如說「亮暗亮暗亮暗亮暗」，這樣頭尾的狀態不一樣就是不被允許的。
+											</div>
+										</div>
+
+										<div id="GN3230200E" 
+											class="collapse show" 
+											aria-labelledby="GN3230200E-header" 
+											data-parent="#evaluation-2-3-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														內容有閃爍，內容被設計成沒有中斷因此只閃爍兩次或三次。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>1. 檢查是否有在任何1秒內不超過三次閃爍。</p>
+														<p>2. 如果有三次閃爍，在開始時檢查在1秒期間結束的亮/暗狀態是否一樣。</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3230200E end -->
+								</div> <!-- Evaluation-2-3-2 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-3-2 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="animation-from-interactions"> 2.3.3 來自互動的動畫 (AAA) </h4>
+								<p>
+									可以終止由互動觸發的動畫，除非該動畫對於功能或所傳達資訊有其必要性。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.3.3
+									</button>
+								</div> <!-- Inspection-2-3-3 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-3-3-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.3.3
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-3-3-accordion">
+									<div class="card"> 
+										<div class="card-header" id="CS3230300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#CS3230300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														CS3230300E：使用CSS媒體查詢(media query)的(reduce-motion)屬性避免畫面動態
+												</button>
+											</h5>
+										</div>
+
+										<div id="CS3230300E" 
+											class="collapse show" 
+											aria-labelledby="CS3230300E-header" 
+											data-parent="#evaluation-2-3-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														允許使用者透過使用“prefers-reduced-motion”的CSS媒體查詢(Media Query)來防止動畫顯示在網頁上。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														對於因使用者互動操作而動作的每個互動元素：
+														<br>
+														1. 啟用系統中的“減少運動”(Reduce Motion)設定；
+														<br>
+														2. 檢查動作為非必要性；
+														<br>
+														3. 檢查此元素無動作。
+													</p>
+													<h5 class="card-title"> 預期結果 </h5>
+													<p class="card-text">
+														#2和#3為是。
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- CS3230300E end -->
+								</div> <!-- Evaluation-2-3-3 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-3-3 end -->
+						</div> <!-- Guideline 2-3 Seisures and Physical Reactions end -->
 					</div> <!-- Operable content end -->
 				</div>
 				<div class="understandable">
