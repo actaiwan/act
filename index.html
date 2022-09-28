@@ -264,7 +264,7 @@
 								<a href="#navigable"> 2.4 可導覽 </a>
 								<ul class="navigable-sidebar">
 									<li class="criteria-sidebar">
-										<a href="#bypass-block"> 2.4.1 Bypass Block </a>
+										<a href="#bypass-blocks"> 2.4.1 Bypass Block </a>
 									</li>
 									<li class="criteria-sidebar">
 										<a href="#page-titled"> 2.4.2 Page Titled </a>
@@ -839,12 +839,12 @@
 											      		<div class="card-text">
 											      			<p>
 											      				開啟，並搭配Firefox中外掛擴充元件「Firefox Accessibility Extension」。
+																<img src="./images/evaluation_screenshot/HM1110100E-1.jpg">
 											      			</p>
-											      			<img src="./images/evaluation_screenshot/HM1110100E-1.jpg">
 											      			<p>
 											      				點選選單列中的Accessibility→Text Equivalents→Show Text Equivalents 來顯示此圖片的替代文字。
+																<img src="./images/evaluation_screenshot/HM1110100E-2.jpg">
 											      			</p>
-											      			<img src="./images/evaluation_screenshot/HM1110100E-2.jpg">
 											      		</div>
 												      </div>
 												  </div>
@@ -1680,7 +1680,7 @@
 													<i class="fa fa-chevron-right"></i>
 												    	No inspection code for 1.2.2
 												</button>
-											</div> <!-- Inspection-2-2 accordion end -->
+											</div> <!-- Inspection-1-2-2 accordion end -->
 
 											<div class="evaluation-collapse">
 												<button class="btn" 
@@ -8564,8 +8564,9 @@
 													</p>
 													<h5 class="card-title"> Evaluation example </h5>
 													<p class="card-text">
-														<p>1. 檢查是否有在任何1秒內不超過三次閃爍。</p>
-														<p>2. 如果有三次閃爍，在開始時檢查在1秒期間結束的亮/暗狀態是否一樣。</p>
+														1. 檢查是否有在任何1秒內不超過三次閃爍。
+														<br>
+														2. 如果有三次閃爍，在開始時檢查在1秒期間結束的亮/暗狀態是否一樣。
 													</p>
 												</div>
 											</div>
@@ -8645,8 +8646,1745 @@
 								<hr>
 							</div><!-- Criteria-2-3-3 end -->
 						</div> <!-- Guideline 2-3 Seisures and Physical Reactions end -->
+						<div class="guideline-header">
+							<h3 class="anchor" id="navigable"> 指引 2.4 可導覽 </h3>
+							<p>
+								提供協助使用者導覽、尋找內容及判斷所在的方法。
+							</p>
+						</div>
+						<div class="guideline-content">
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="bypass-blocks"> 2.4.1 跳過區塊 (A) </h4>
+								<p>
+									有機制得以跳過在多頁中重複出現的內容區塊。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#inspection-2-4-1-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Inspection code for criteria 2.4.1
+									</button>
+								</div> 
+								<div class="accordion collapse inspection-content" 
+									 id="inspection-2-4-1-accordion">
+									<div class="card">
+										<div class="card-header" id="HM1240102C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240102C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240102C：以導覽標籤將相關鏈結組件做分群
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240102C" 
+												class="collapse show" 
+												aria-labelledby="HM1240102C-header" 
+												data-parent="#inspection-2-4-1-accordion">
+												<div class="card ">
+													<div class="card-body inspection-detail">
+														<h5 class="card-title"> Inspection rule </h5>
+														<div class="card-text">
+															如果多個導覽連結(navigation links)存在，以&lt;nav&gt;標籤將其適當分組，通過檢測，否則檢測失敗。
+														</div>
+														<h5 class="card-title"> Inspection code example 1</h5>
+														<div class="card-text">
+															<pre class="line-numbers">
+																<code class="language-markup">
+																	&lt;nav&gt;
+																		&lt;a href=&quot;../webaccessibility.html&quot;&gt;Web Accessibility&lt;/a&gt;
+																		&lt;a href=&quot;../docaccessibility.html&quot;&gt;Document Accessibility&lt;/a&gt;
+																		&lt;a href=&quot;../mobileaccessibility.html&quot;&gt;Mobile Accessibility&lt;/a&gt;
+																	&lt;/nav&gt;
+																</code>
+															</pre>
+														</div>
+														<h5 class="card-title"> Inspection code example 2</h5>
+														<div class="card-text">
+															<pre class="line-numbers">
+																<code class="language-markup">
+																	&lt;nav aria-label=&quot;Site menu&quot;&gt;
+																		&lt;ul&gt;
+																			&lt;li&gt;...a list of links site navigation link here ...&lt;/li&gt;
+																		&lt;/ul&gt;
+																	&lt;/nav&gt;
+																	...
+																	&lt;article&gt;
+																		&lt;nav aria-label=&quot;Related links&quot;&gt;
+																			...a list of related links here ...
+																		&lt;/nav&gt;
+																	&lt;/article&gt;
+																</code>
+															</pre>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div> <!-- HM1240102C end -->
+								</div><!-- Inspection-2-4-1 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-1-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.1
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-1-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1240100E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240100E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240100E：在每一個頁面頂端加入一個鏈結，直接連往主要的內容區域
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240100E" 
+											class="collapse show" 
+											aria-labelledby="GN1240100E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 開啟網頁。
+															<img src="./images/evaluation_screenshot/GN1240100E-1.jpg">
+														</p>
+														<p>
+															2. 按下鍵盤Tab鍵遊走，並檢視頁面頂端是否出現「跳到主要內容區」連結。
+															<img src="./images/evaluation_screenshot/GN1240100E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240100E end -->
+									<div class="card">
+										<div class="card-header" id="GN1240101E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240101E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240101E：在重複內容的區塊開頭加入鏈結，連到該區塊結束之處，或用頁框來群聚重複出現的材料區塊
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240101E" 
+											class="collapse" 
+											aria-labelledby="GN1240101E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結 (按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/GN1240101E-1.jpg">
+														</p>
+														<p>
+															2. 確認程式碼裡鏈結是否可以連往其他區塊。
+															<img src="./images/evaluation_screenshot/GN1240101E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240101E end -->
+									<div class="card">
+										<div class="card-header" id="GN1240102E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240102E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240102E：在頁面頂端加入鏈結，連到每一個內容區域
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240102E" 
+											class="collapse" 
+											aria-labelledby="GN1240102E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 先確認網頁的網站頂端確定有導覽欄，並且顯示目前所在頁面。
+															<img src="./images/evaluation_screenshot/GN1240102E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結 (按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/GN1240102E-2.jpg">
+														</p>
+														<p>
+															3. 檢查原始碼確認Navigation鏈結到其他頁面。
+															<img src="./images/evaluation_screenshot/GN1240102E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240102E end -->
+									<div class="card">
+										<div class="card-header" id="GN1240103E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240103E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240103E：使用結構性組件來將鏈結分群
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240103E" 
+											class="collapse" 
+											aria-labelledby="GN1240103E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：檢查每個頁面導覽欄</h5>
+													<p class="card-text">
+														<p>
+															1. 檢查每個頁面導覽欄下方是否有分類過後的鏈結。
+															<img src="./images/evaluation_screenshot/GN1240103E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/GN1240103E-2.jpg">
+														</p>
+														<p>
+															3. 檢查原始碼確認Navigation鏈結到其他頁面。
+															<img src="./images/evaluation_screenshot/GN1240103E-2.jpg">
+														</p>
+													</p>
+													<h5 class="card-title"> Evaluation example 2：使用結構單一的地標頁面區域</h5>
+													<p class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;div id=&quot;header&quot; role=&quot;banner&quot;&gt;A banner image and introductory title&lt;/div&gt;
+																&lt;div id=&quot;sitelookup&quot; role=&quot;search&quot;&gt;....&lt;/div&gt;
+																&lt;div id=&quot;nav&quot; role=&quot;navigation&quot;&gt;...a list of links here ... &lt;/div&gt;
+																&lt;div id=&quot;content&quot; role=&quot;main&quot;&gt; ... Ottawa is the capital of Canada ...&lt;/div&gt;
+																&lt;div id=&quot;rightsideadvert&quot; role=&quot;complementary&quot;&gt;....an advertisement here...&lt;/div&gt;
+																&lt;div id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;(c)The Freedom Company, 123 Freedom Way, Helpville, USA&lt;/div&gt;
+															</code>
+														</pre>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240103E end -->
+									<div class="card">
+										<div class="card-header" id="GN1240104E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240104E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240104E：在每一個內容區段開頭處提供標題組件
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240104E" 
+											class="collapse" 
+											aria-labelledby="GN1240104E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：使用標題元素&lt;h2&gt;標記每個標題組織搜索頁的各個部分</h5>
+													<p class="card-text">
+														<p>
+															網頁顯示
+															<img src="./images/evaluation_screenshot/GN1240104E-1.jpg">
+														</p>
+														<p>
+															原始碼
+															<pre class="line-numbers">
+																<code class="language-markup">
+																	&lt;h1&gt;搜尋科技期刊&lt;/h1&gt;
+																	&lt;h2&gt;搜尋&lt;/h2&gt;
+																	&lt;form action=&quot;search.php&quot;&gt;
+																	&lt;p&gt;&lt;label for=&quot;searchInput&quot;&gt;輸入搜尋主題： &lt;/label&gt;
+																	&lt;input type=&quot;text&quot; size=&quot;30&quot; id=&quot;searchInput&quot;&gt;
+																	&lt;input type=&quot;submit&quot; value=&quot;搜尋&quot;&gt;&lt;/p&gt;
+																	&lt;/form&gt;
+																	&lt;h2&gt;可用期刊&lt;/h2&gt;
+																	&lt;div class=&quot;jlinks&quot;&gt;
+																	&lt;a href=&quot;pcoder.com&quot;&gt;專業編碼器&lt;/a&gt; |
+																	&lt;a href=&quot;algo.com&quot;&gt;演算法&lt;/a&gt; |
+																	&lt;a href=&quot;jse.com&quot;&gt;軟體工程報導&lt;/a&gt;
+																	&lt;/div&gt;
+																	&lt;h2&gt;搜尋結果&lt;/h2&gt;
+																</code>
+															</pre>
+														</p>
+													</p>
+													<h5 class="card-title"> Evaluation example 2：使用標題元素&lt;h2&gt;顯示整體組織結構的內容呈現</h5>
+													<p class="card-text">
+														<p>
+															網頁顯示
+															<img src="./images/evaluation_screenshot/GN1240104E-2.jpg">
+														</p>
+														<p>
+															原始碼
+															<pre class="line-numbers">
+																<code class="language-markup">
+																	&lt;h1&gt;搜尋科技期刊&lt;/h1&gt;
+																	&lt;h2&gt;搜尋&lt;/h2&gt;
+																	&lt;form action=&quot;search.php&quot;&gt;
+																	&lt;p&gt;&lt;label for=&quot;searchInput&quot;&gt;輸入搜尋主題： &lt;/label&gt;
+																	&lt;input type=&quot;text&quot; size=&quot;30&quot; id=&quot;searchInput&quot;&gt;
+																	&lt;input type=&quot;submit&quot; value=&quot;搜尋&quot;&gt;&lt;/p&gt;
+																	&lt;/form&gt;
+																	&lt;h2&gt;可用期刊&lt;/h2&gt;
+																	&lt;div class=&quot;jlinks&quot;&gt;
+																	&lt;a href=&quot;pcoder.com&quot;&gt;專業編碼器&lt;/a&gt; |
+																	&lt;a href=&quot;algo.com&quot;&gt;演算法&lt;/a&gt; |
+																	&lt;a href=&quot;jse.com&quot;&gt;軟體工程報導&lt;/a&gt;
+																	&lt;/div&gt;
+																	&lt;h2&gt;搜尋結果&lt;/h2&gt;
+																</code>
+															</pre>
+														</p>
+													</p>
+
+													<h5 class="card-title"> Evaluation example 2：使用結構單一的地標頁面區域</h5>
+													<p class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;!-- Logo, banner graphic, search form, etc. --&gt;
+																&lt;h2&gt;導航&lt;/h2&gt;
+																&lt;ul&gt;
+																&lt;li&gt;&lt;a href=&quot;about.htm&quot;&gt;關於我們&lt;/a&gt;&lt;/li&gt;
+																&lt;li&gt;&lt;a href=&quot;contact.htm&quot;&gt;聯絡我們&lt;/a&gt;&lt;/li&gt;
+																...
+																&lt;/ul&gt;
+																&lt;h2&gt;所有標題&lt;/h2&gt;
+																&lt;!-- Text, images, other material making up the main content... --&gt;
+															</code>
+														</pre>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240104E end -->
+									<div class="card">
+										<div class="card-header" id="GN1240105E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240105E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240105E：根據結構性標記來將內容定位
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240105E" 
+											class="collapse" 
+											aria-labelledby="GN1240105E-header" 
+											data-parent="#evaluation-2-4-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 確認是否有使用CSS結構性標記，使用chrome瀏覽器開啟網頁，按右鍵點選檢查標籤，即可確認程式碼裡是否使用CSS結構性標記。
+															<img src="./images/evaluation_screenshot/GN1240105E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/GN1240105E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240105E end -->
+								</div> <!-- Evaluation-2-4-1 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-4-1 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="page-titled"> 2.4.2 網頁標題 (A) </h4>
+								<p>
+									網頁有用標題來描述主旨或目的
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#inspection-2-4-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+								    		Inspection code for 2.4.2
+									</button>
+								</div> 
+								<div class="accordion collapse inspection-content" 
+									 id="inspection-2-4-2-accordion">
+									<div class="card">
+										<div class="card-header" id="HM1240200C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240200C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240200C：網頁需有標題組件，且其值不得為空字串或空白
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240200C" 
+											class="collapse show" 
+											aria-labelledby="HM1240200C-header" 
+											data-parent="#inspection-2-4-2-accordion">
+											<div class="card ">
+												<div class="card-body inspection-detail">
+													<h5 class="card-title"> Inspection rule </h5>
+													<div class="card-text">
+														如果&lt;title&gt;標籤內容不為空字串或空白，通過檢測，否則檢測失敗。
+													</div>
+													<h5 class="card-title"> Inspection code example </h5>
+													<div class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;head&gt;
+																&lt;title&gt;台北車站站前廣場&lt;/title&gt;
+																&lt;/head&gt;
+																&lt;body&gt;
+																...
+																&lt;/body&gt;
+															</code>
+														</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240200C end -->
+								</div> <!-- Inspection-2-4-2 accordion end --> 
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.2
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-2-accordion">
+									<div class="card"> 
+										<div class="card-header" id="HM1240200E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240200E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240200E：提供網頁的描述性標題
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240200E" 
+											class="collapse show" 
+											aria-labelledby="HM1240200E-header" 
+											data-parent="#evaluation-2-4-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML技術的網頁，皆能以此方法來做檢測。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 檢測瀏覽器網頁上所顯示描述性的標題。
+															<img src="./images/evaluation_screenshot/HM1240200E-1.jpg">
+														</p>
+														<p>
+															2. 按右鍵->選擇檢視網頁原始碼。
+															<img src="./images/evaluation_screenshot/HM1240200E-2.jpg">
+														</p>
+														<p>
+															3. 檢查&lt;title&gt;標籤即可看到網頁的描述性標題內容。
+															<img src="./images/evaluation_screenshot/HM1240200E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240200E end -->
+								</div> <!-- Evaluation-2-4-2 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-4-2 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="focus-order"> 2.4.3 焦點順序 (A) </h4>
+								<p>
+									如果網頁能依序導覽，且導覽順序將會影響到意義或操作，則可取得焦點的元件要以能保留意義與操作性的順序，來取得焦點。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.4.3
+									</button>
+								</div> <!-- Inspection-2-4-3 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-3-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.3
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-3-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1240300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240300E：按照內容的序列及關連性來安排互動元件的放置順序
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240300E" 
+											class="collapse show" 
+											aria-labelledby="GN1240300E-header" 
+											data-parent="#evaluation-2-4-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML語法的網頁，都能以此方式來做檢測。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 確定是否有任何時間限制的互動功能(客戶端和伺服端)。
+															<img src="./images/evaluation_screenshot/GN1240300E-1.jpg">
+														</p>
+														<p>
+															2. 先確認好每個交互標籤的內容與邏輯順序，以此範例來看，一表格中包含兩個標題，分別為新郎與新娘，其中新郎的搜尋條件要與新娘的搜尋條件對齊。
+															<img src="./images/evaluation_screenshot/GN1240300E-2.jpg">
+														</p>
+														<p>
+															3. 檢查交互標籤的內容順序是否跟邏輯順序相同。
+															<img src="./images/evaluation_screenshot/GN1240300E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240300E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1240301E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240301E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240301E：在鏈結、表單控制元件、物件間建立合乎邏輯的跳位順序
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240301E" 
+											class="collapse show" 
+											aria-labelledby="GN1240301E-header" 
+											data-parent="#evaluation-2-4-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何運用HTML或XHTML語法的網頁，都能以此方式來做檢測。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 檢查是否使用tabindex，在網頁上按右鍵->選擇檢查網頁原始碼。
+															<img src="./images/evaluation_screenshot/GN1240301E-1.jpg">
+														</p>
+														<p>
+															2. 如果有使用tabindex，檢查tabindex屬性所指定的內容來決定Tab鍵的順序。如下圖所顯示，新郎的姓氏、名字與出生地分別為tabindex=1、tabindex=2、tabindex=3，表示按Tab鍵的順序，輸入完新郎後，再輸入新娘的資料內容
+															<img src="./images/evaluation_screenshot/GN1240301E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240301E end -->
+								</div> <!-- Evaluation-2-4-3 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-4-3 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="link-purpose-in-context"> 2.4.4 鏈結目的（脈絡）(A) </h4>
+								<p>
+									每一個鏈結的目的可以透過鏈結文字本身或以鏈結文字加上能以程式化判定的鏈結脈絡予以確認，除非鏈接的目的對整體使用者來說均不明確。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#inspection-2-4-4-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+								    		Inspection code for 2.4.4
+									</button>
+								</div>
+								<div class="accordion collapse inspection-content" 
+									 id="inspection-2-4-4-accordion">
+									<div class="card">
+										<div class="card-header" id="HM1240400C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240400C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240400C：連往相同資源的毗鄰圖片與文字，其由文字內容及替代文字產生之鏈結文字只能有一份
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240400C" 
+											class="collapse show" 
+											aria-labelledby="HM1240400C-header" 
+											data-parent="#inspection-2-4-4-accordion">
+											<div class="card ">
+												<div class="card-body inspection-detail">
+													<h5 class="card-title"> Inspection rule </h5>
+													<div class="card-text">
+														如果相鄰的圖片和文字超連結都是連往相同的資源，必須將超連結合併使用，且圖片alt屬性必須是空值或不可重複連結文字的內容，通過檢測，否則檢測失敗。
+													</div>
+													<h5 class="card-title"> Inspection code example 1</h5>
+													<div class="card-text">
+														範例為一個回去首頁的圖示與文字超連結，文字內容已經是「回去首頁」，所以&lt;img&gt;標籤中的alt屬性就不再多做設定。
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;a href=&quot;foo.htm&quot;&gt;
+																	&lt;img src=&quot;house.gif&quot; alt=&quot;&quot;/&gt;回去首頁
+																&lt;/a&gt;
+															</code>
+														</pre>
+													</div>
+													<h5 class="card-title"> Inspection code example 2</h5>
+													<div class="card-text">
+														範例為一個檔案下載的圖示與文字超連結，檔案類型使用圖示表示並未描述在文字內容，所以&lt;img&gt;標籤中的alt屬性顯示為「pdf檔案」，並與連結文字區分。
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;a href=&quot;foo.pdf&quot; title=&quot;檔案名稱&quot;&gt;
+																	&lt;img src=&quot;pdf.gif&quot; alt=&quot;pdf檔案&quot;/&gt;點我下載
+																&lt;/a&gt;
+															</code>
+														</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240400C end -->
+									<div class="card">
+										<div class="card-header" id="HM1240401C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240401C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240401C：具有連結目的之鏈結組件均需有鏈結文字，且其內容不得為空字串或空白；若此鏈結組件前後尚有其他內容，則亦需有標題屬性，且其值不得為空字串或空白。
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240401C" 
+											class="collapse" 
+											aria-labelledby="HM1240401C-header" 
+											data-parent="#inspection-2-4-4-accordion">
+											<div class="card ">
+												<div class="card-body inspection-detail">
+													<h5 class="card-title"> Inspection rule </h5>
+													<div class="card-text">
+														如果鏈結文字內容不為空值且鏈結前後有其他內容時，&lt;a&gt;標籤中的title屬性不為空字串或空白，通過檢測，否則檢測失敗
+													</div>
+													<h5 class="card-title"> Inspection code example 1</h5>
+													<div class="card-text">
+														&lt;a&gt;標籤中，herf屬性的值為「http://example.com/subscribe.html」，title屬性的值為「在新視窗打開鏈結」，皆不為空字串或空白。
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;a href=&quot;http://example.com/subscribe.html&quot; target=&quot;_blank&quot; title=&quot;在新視窗打開鏈結&quot;&gt;訂閱新聞的電子郵件通知&lt;/a&gt;
+															</code>
+														</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240401C end -->
+								</div> <!-- Inspection-2-4-4 accordion end --> 
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-4-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.4
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-4-accordion">
+									<div class="card"> 
+										<div class="card-header" id="HM1240400E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240400E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240400E：使用鏈結文字及前後的脈絡情境來指明鏈結目的
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240400E" 
+											class="collapse show" 
+											aria-labelledby="HM1240400E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/HM1240400E-1.jpg">
+														</p>
+														<p>
+															2. 檢查是否有提供前後的脈絡情境描述鏈結目的的文字，並點擊連結來驗證。
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240400E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1240401E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240401E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240401E：針對脈絡中的鏈結，提供描述鏈結目的的鏈結文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240401E" 
+											class="collapse" 
+											aria-labelledby="GN1240401E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的文字 </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/GN1240401E-1.jpg">
+														</p>
+														<p>
+															2. 檢查是否有提供描述鏈結目的的文字，並點擊連結來驗證
+															<img src="./images/evaluation_screenshot/GN1240401E-2.jpg">
+														</p>
+													</p>
+													<h5 class="card-title"> Evaluation example 2：提供鏈結的額外資訊</h5> 
+													<div class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;h2 id=&quot;headline&quot;&gt;Storms hit east coast&lt;/h2&gt;
+																&lt;p&gt;Torrential rain and gale force winds have struck the east coast, causing flooding in many coastal towns.
+																&lt;a id=&quot;p123&quot; href=&quot;news.html&quot; aria-labelledby=&quot;p123 headline&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+															</code>
+														</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240401E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM1240402E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240402E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240402E：合併相同資源的毗鄰圖片與文字鏈結
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240402E" 
+											class="collapse" 
+											aria-labelledby="HM1240402E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的文字 </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/HM1240402E-1.jpg">
+														</p>
+														<p>
+															2. 檢查敘述文字和圖片來源是否有被包含在&lt;a href=&quot;…&gt;&lt;/a&gt;連結區塊內，並點擊文字及圖片鏈結來驗證。
+															<img src="./images/evaluation_screenshot/HM1240402E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240402E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM1240403E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240403E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240403E：提供描述鏈結組件鏈結目的的鏈結文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240403E" 
+											class="collapse" 
+											aria-labelledby="HM1240403E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內存在鏈結，都需要遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的文字 </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/HM1240403E-1.jpg">
+														</p>
+														<p>
+															2. 檢查是否使用Anchor標籤，且&lt;a href=&quot;…&gt;&lt;/a&gt;連結區塊內是否有提供描述鏈結目的的文字，並點擊連結來驗證。
+															<img src="./images/evaluation_screenshot/HM1240403E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240403E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM1240404E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM1240404E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM1240404E：針對脈絡中的鏈結，用標題屬性來補充鏈結文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM1240404E" 
+											class="collapse" 
+											aria-labelledby="HM1240404E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內，當鏈結文字描述鏈結目的不夠明確時，須加上標題屬性來補充鏈結文字。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的文字 </h5> 
+													<p class="card-text">
+														<p>
+															1. 滑鼠移到鏈結上，檢查是否有出現說明文字。
+															<img src="./images/evaluation_screenshot/HM1240404E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結 (按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/HM1240404E-2.jpg">
+														</p>
+														<p>
+															3. 檢查&lt;a href=&quot;…&quot;&gt;連結區塊內是否有title屬性的補充說明文字。
+															<img src="./images/evaluation_screenshot/HM1240404E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM1240404E end -->
+									<div class="card"> 
+										<div class="card-header" id="CS1240405E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#CS1240405E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														CS1240405E：在靠近網頁開頭處提供可以變更鏈結文字的控制元件，或使用CSS隱藏部分鏈結文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="CS1240405E" 
+											class="collapse" 
+											aria-labelledby="CS1240405E-header" 
+											data-parent="#evaluation-2-4-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內，出現單獨存在的鏈結，此鏈結存在多種類型的話，須提供可以變更鏈結文字的控制元件。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的文字 </h5> 
+													<p class="card-text">
+														<p>
+															1. 檢查各個類型的鏈結內容主題是否相同，並和單獨存在的主鏈結一起檢查。
+															<img src="./images/evaluation_screenshot/CS1240405E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結 (按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/CS1240405E-2.jpg">
+														</p>
+														<p>
+															3. 檢查是否有使用CSS樣式隱藏部分鏈結文字，如圖隱藏”華盛頓經濟成長計畫”，鏈結文字只顯示”計畫”。
+															<img src="./images/evaluation_screenshot/CS1240405E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- CS1240405E end -->
+								</div> <!-- Evaluation-2-4-4 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-4 end -->
+
+							<div class="criteria-content accesibility-level-AA">
+								<h4 id="multiple-ways"> 2.4.5 多種方式 (AA) </h4>
+								<p>
+									提供多種方法指出某一網頁在一組網頁之中的位置，除非此網頁是某個流程或步驟的結果。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.4.5
+									</button>
+								</div> <!-- Inspection-2-4-5 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-5-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.5
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-5-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1240500E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1240500E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1240500E：提供網站導覽、導覽工具或機制、搜尋功能、網頁清單鏈結等功能，協助使用者尋找內容
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1240500E" 
+											class="collapse show" 
+											aria-labelledby="GN1240500E-header" 
+											data-parent="#evaluation-2-4-5-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="author-note-header"> Author's note </h5>
+													<div class="author-note">
+														其實這條以國家通訊傳播委員會的規則來說應該是「GN2240500E」（因為是AA等級）。
+													</div>
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														任何在HTML或XHTML的網頁內，需要有協助使用者尋找內容或提供導覽機制的功能。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 確認網站上有導覽機制(ex:網站地圖)，並確認鏈結目的與文字符合。
+															<img src="./images/evaluation_screenshot/GN1240500E-1.jpg">
+														</p>
+														<p>
+															2. 確認網站上有搜尋功能，並且確實能搜尋到相關資料。
+															<img src="./images/evaluation_screenshot/GN1240500E-2.jpg">
+														</p>
+														<p>
+															3. 確認網站上有網頁清單鏈結，並確認鏈結目的與文字符合。
+															<img src="./images/evaluation_screenshot/GN1240500E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1240500E end -->
+								</div> <!-- Evaluation-2-4-5 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-5 end --> 
+							<div class="criteria-content accesibility-level-AA">
+								<h4 id="headings-and-labels"> 2.4.6 標題和標籤 (AA) </h4>
+								<p>
+									用標頭及標籤來描述主旨或目的。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.4.6
+									</button>
+								</div> <!-- Inspection-2-4-6 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-6-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.6
+									</button>
+								</div> <!-- Evaluation-2-4-6 accordion end -->
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-6-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN2240600E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN2240600E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN2240600E：提供描述性的標題(headings)
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN2240600E" 
+											class="collapse show" 
+											aria-labelledby="GN2240600E-header" 
+											data-parent="#evaluation-2-4-6-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														HTML提供六種標頭(Heading)環境，由大到小依序有H1, H2, H3, H4, H5和H6六個等級。標題文字視情況會用大號字、或者用粗體字，所有標題文字原則上都是靠左排齊。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟檔案。此檔案主題為災害防範，底下的小主題分為水災、火災、雪災等防範。
+															<img src="./images/evaluation_screenshot/GN2240600E-1.jpg">
+														</p>
+														<p>
+															2. 可點選右鍵檢視網頁原始碼。主題“災害防範”用H1的標頭，底下的小主題則使用H2標頭。
+															<img src="./images/evaluation_screenshot/GN2240600E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN2240600E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN2240601E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN2240601E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN2240601E：提供描述性的標籤(label)
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN2240601E" 
+											class="collapse show" 
+											aria-labelledby="GN2240601E-header" 
+											data-parent="#evaluation-2-4-6-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														用來設定輸入元件的標籤(label)，標籤可以是文字或圖片。每一個標籤只能指定一個輸入元件。使用者可以點擊標籤，選擇輸入元件。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟網頁。
+															<img src="./images/evaluation_screenshot/GN2240601E-1.jpg">
+														</p>
+														<p>
+															2. 將滑鼠點向標籤 “我的電話：”，則游標就會在輸入行上，等待使用者輸入了。
+															<img src="./images/evaluation_screenshot/GN2240601E-2.jpg">
+														</p>
+														<p>
+															3. 可點選右鍵檢視網頁原始碼。程式碼中“我的電話：”就是用來設定輸入元件的標籤。
+															<img src="./images/evaluation_screenshot/GN2240601E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN2240601E end -->
+								</div> <!-- Evaluation-2-4-6 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-6 end --> 
+
+							<div class="criteria-content accesibility-level-AA">
+								<h4 id="focus-visible"> 2.4.7 焦點可視 (AA) </h4>
+								<p>
+									任何可由鍵盤操作的使用者介面都要有鍵盤焦點指示可見的操作模式。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.4.7
+									</button>
+								</div> <!-- Inspection-2-4-7 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-7-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.7
+									</button>
+								</div> <!-- Evaluation-2-4-7 accordion end -->
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-7-accordion">
+									<div class="card"> 
+										<div class="card-header" id="CS2240700E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#CS2240700E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														CS2240700E：使用者介面取得焦點時，使其鍵盤焦點指示具高可見度
+												</button>
+											</h5>
+										</div>
+
+										<div id="CS2240700E" 
+											class="collapse show" 
+											aria-labelledby="CS2240700E-header" 
+											data-parent="#evaluation-2-4-7-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														當使用者在介面選定焦點來做點選或是鍵盤輸入時，其焦點指示具高可見度。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟檔案。
+															<img src="./images/evaluation_screenshot/CS2240700E-1.jpg">
+														</p>
+														<p>
+															2. 當使用者把焦點放在輸入行時，其焦點指示具高可見度(輸入行變為綠色)。
+															<img src="./images/evaluation_screenshot/CS2240700E-2.jpg">
+														</p>
+														<p>
+															3. 可點選右鍵檢視網頁原始碼。此範例使用CSS的:FOCUS動態準類別。
+															<img src="./images/evaluation_screenshot/CS2240700E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- CS2240700E end -->
+								</div> <!-- Evaluation-2-4-7 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-7 end --> 
+
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="location"> 2.4.8 位置 (AAA) </h4>
+								<p>
+									有提供使用者位於一組網頁中的位置的資訊。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.4.8
+									</button>
+								</div> <!-- Inspection-2-4-8 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-8-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.8
+									</button>
+								</div> <!-- Evaluation-2-4-8 accordion end -->
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-8-accordion">
+									<div class="card"> 
+										<div class="card-header" id="HM3240800E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3240800E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3240800E：使用導覽工具，指明目前所在網頁在一整組網頁或整個網站中的位置，以及與其他網頁之間的關連性
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM3240800E" 
+											class="collapse show" 
+											aria-labelledby="HM3240800E-header" 
+											data-parent="#evaluation-2-4-8-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														使用者能透過該網頁所提供的指示來了解，目前所在網頁在整個網站的位置及關連性。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟檔案。此範例中，網際網路課程共五章，而使用者目前位置是在第三章。
+															<img src="./images/evaluation_screenshot/HM3240800E-1.jpg">
+														</p>
+														<p>
+															2. 點選右下角的指引”回網路課程首頁”後，就會回到課程首頁。
+															<img src="./images/evaluation_screenshot/HM3240800E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3240800E end -->
+								</div> <!-- Evaluation-2-4-8 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-8 end --> 
+
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="link-purpose-link-only"> 2.4.9 鏈結目的（鏈結本身）(AAA) </h4>
+								<p>
+									每一個鏈結目的應僅由鏈結文字本身即可辨識，除非鏈結目的對整體使用者來說均不明確。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											data-toggle="collapse"
+											data-target="#inspection-2-4-9-accordion"
+											aria-expanded="true">
+										<i class="fa fa-chevron-right"></i>
+								    		Inspection code for 2.4.9
+									</button>
+								</div> <!-- Inspection-2-4-9 accordion end -->
+								<div class="accordion collapse inspection-content" 
+									 id="inspection-2-4-9-accordion">
+									<div class="card">
+										<div class="card-header" id="HM3240900C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3240900C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3240900C：任何具有連結目的之單獨鏈結組件均需有鏈結文字及標題屬性，且鏈結文字之內容及標題屬性之值均不得為空字串或空白
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM3240900C" 
+											class="collapse show" 
+											aria-labelledby="HM3240900C-header" 
+											data-parent="#inspection-2-4-4-accordion">
+											<div class="card ">
+												<div class="card-body inspection-detail">
+													<h5 class="card-title"> Inspection rule </h5>
+													<div class="card-text">
+														如果鏈結文字及標題屬性存在且不得為空字串或空白，通過檢測，否則檢測失敗。
+													</div>
+													<h5 class="card-title"> Inspection code example</h5>
+													<div class="card-text">
+														若<a>標籤內的href屬性與連結文字不為空值，且存在title屬性，則通過檢測。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3240900C end -->
+								</div> <!-- Inspection-2-4-9 end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-9-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.9
+									</button>
+								</div> <!-- Evaluation-2-4-9 accordion end -->
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-9-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3240900E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3240900E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3240900E：針對單獨存在的鏈結，提供描述鏈結目的的鏈結文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3240900E" 
+											class="collapse show" 
+											aria-labelledby="GN3240900E-header" 
+											data-parent="#evaluation-2-4-9-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														描述鏈結目的之本文，需要遵守此規則。
+														使用aria-label屬性指出鏈結目的。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的鏈結文字</h5> 
+													<p class="card-text">
+														<p>
+															1. 針對單獨鏈結部分，具有描述鏈結目的的文字。
+															<img src="./images/evaluation_screenshot/GN3240900E-1.jpg">
+														</p>
+														<p>
+															2. 可點選右鍵檢視網頁原始碼。
+															<img src="./images/evaluation_screenshot/GN3240900E-2.jpg">
+														</p>
+													</p>
+													<h5 class="card-title"> Evaluation example 2：使用aria-label提供描述鏈結目的的鏈結說明</h5> 
+													<p class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																&lt;h4&gt;Neighborhood News&lt;/h4&gt;
+																&lt;p&gt;
+																Seminole tax hike:  Seminole city managers are proposing a 75% increase in property taxes for the coming fiscal year.  
+																&lt;a href=&quot;taxhike.html&quot; aria-label=&quot;Read more about Seminole tax hike&quot;&gt;[Read more...]&lt;/a&gt;
+																&lt;/p&gt;
+
+																&lt;p&gt;Baby Mayor: Seminole voters elect the city's youngest mayor ever by voting in 3 year old Willy &quot;Dusty&quot; Williams in yesterday's mayoral election.  
+																&lt;a href=&quot;babymayor.html&quot; aria-label=&quot;Read more about Seminole's new baby mayor&quot;&gt;[Read more...]&lt;/a&gt;
+																&lt;/p&gt;
+															</code>
+														</pre>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3240900E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM3240901E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3240901E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3240901E：針對單獨存在的鏈結，合併相同資源的毗鄰圖片與文字鏈結
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM3240901E" 
+											class="collapse show" 
+											aria-labelledby="HM3240901E-header" 
+											data-parent="#evaluation-2-4-9-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														這種技術是提供文本和圖片在共為一個鏈結的時候，不會讓鍵盤或輔具使用者在操作網頁上感到混淆或困難。
+													</p>
+													<h5 class="card-title"> Evaluation example 1：提供描述鏈結目的的鏈結文字</h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟檔案。此範例中，具有相同鏈結的圖片及文字。
+															<img src="./images/evaluation_screenshot/HM3240901E-1.jpg">
+														</p>
+														<p>
+															2. 可點選右鍵檢視網頁原始碼。
+															<img src="./images/evaluation_screenshot/HM3240901E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3240901E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM3240902E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3240902E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3240902E：針對單獨存在的鏈結，提供描述鏈結組件鏈結目的的鏈結文字												</button>
+											</h5>
+										</div>
+
+										<div id="HM3240902E" 
+											class="collapse show" 
+											aria-labelledby="HM3240902E-header" 
+											data-parent="#evaluation-2-4-9-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														圖片超連結的替代文字具有描述鏈結目的的功能。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 使用Google Chrome瀏覽器開啟檔案。此範例中，圖片具有鏈結功能。
+															<img src="./images/evaluation_screenshot/HM3240902E-1.jpg">
+														</p>
+														<p>
+															2. 可點選右鍵檢視網頁原始碼。使用alt屬性的img標籤來描述一個圖形鏈結的目的。
+															<img src="./images/evaluation_screenshot/HM3240902E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3240902E end -->
+									<div class="card"> 
+										<div class="card-header" id="CS3240903E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#CS3240903E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														CS3240903E：針對單獨存在的鏈結，在靠近網頁開頭處提供可以變更鏈結文字的控制元件，或使用CSS隱藏部分鏈結文字
+											</h5>
+										</div>
+
+										<div id="CS3240903E" 
+											class="collapse show" 
+											aria-labelledby="CS3240903E-header" 
+											data-parent="#evaluation-2-4-9-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														檢查各個類型的鏈結內容主題是否相同，並和單獨存在的主鏈結一起檢查。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 檢查各個類型的鏈結內容主題是否相同，並和單獨存在的主鏈結一起檢查。
+															<img src="./images/evaluation_screenshot/CS3240903E-1.jpg">
+														</p>
+														<p>
+															2. 使用Google Chrome「檢視原始碼」顯示連結(按下右鍵→檢視原始碼)。
+															<img src="./images/evaluation_screenshot/CS3240903E-2.jpg">
+														</p>
+														<p>
+															3. 檢查是否有使用CSS樣式隱藏部分鏈結文字，如圖省略“華盛頓經濟成長計畫”，鏈結文字剩“計畫”。
+															<img src="./images/evaluation_screenshot/CS3240903E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- CS3240903E end -->
+									<div class="card"> 
+										<div class="card-header" id="HM3240904E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3240904E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3240904E：針對單獨存在的影像地圖區域，提供有意義的替代文字
+											</h5>
+										</div>
+
+										<div id="HM3240904E" 
+											class="collapse show" 
+											aria-labelledby="HM3240904E-header" 
+											data-parent="#evaluation-2-4-9-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<p class="card-text">
+														所有單獨存在的影像地圖區域都必須遵守此指引。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<p class="card-text">
+														<p>
+															1. 檢視網頁原始碼。
+															<img src="./images/evaluation_screenshot/HM3240904E-1.jpg">
+														</p>
+														<p>
+															2. 若單獨存在影像地圖的標籤，要有替代文字alt屬性，對其作敘述。
+															<img src="./images/evaluation_screenshot/HM3240904E-2.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3240904E end -->
+								</div> <!-- Evaluation-2-4-9 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-9 end --> 
+
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="section-headings"> 2.4.10 區段標題 (AAA) </h4>
+								<p>
+									網頁有用標題來描述主旨或目的
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#inspection-2-4-10-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+								    		Inspection code for 2.4.10
+									</button>
+								</div> 
+								<div class="accordion collapse inspection-content" 
+									 id="inspection-2-4-10-accordion">
+									<div class="card">
+										<div class="card-header" id="HM3241000C-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#HM3241000C" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														HM3241000C：網頁必須要使用標頭組件
+												</button>
+											</h5>
+										</div>
+
+										<div id="HM3241000C" 
+											class="collapse show" 
+											aria-labelledby="HM3241000C-header" 
+											data-parent="#inspection-2-4-10-accordion">
+											<div class="card ">
+												<div class="card-body inspection-detail">
+													<h5 class="card-title"> Inspection rule </h5>
+													<div class="card-text">
+														如果標頭組件存在，通過檢測，否則檢測失敗。
+													</div>
+													<h5 class="card-title"> Inspection code example </h5>
+													<div class="card-text">
+														<pre class="line-numbers">
+															<code class="language-markup">
+																...
+																&lt;body&gt;
+																	&lt;h1&gt;烹飪技術&lt;/h1&gt;
+																	... 這裡一些文字 ...
+																	&lt;h2&gt;使用油烹調&lt;/h2&gt;
+																	... 部分的文字 ...
+																	&lt;h3&gt;清炒&lt;/h3&gt;
+																	...
+																	&lt;h3&gt;油炸&lt;/h3&gt;
+																	&lt;h2&gt;用奶油烹調&lt;/h2&gt;
+																	... 部分的文字 ...
+																&lt;/body&gt;
+																&lt;/html&gt;
+															</code>
+														</pre>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- HM3241000C end -->
+								</div> <!-- Inspection-2-4-10 accordion end --> 
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-4-10-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.4.10
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-4-10-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN3241000E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN3241000E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN3241000E：使用標頭來組織網頁
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN3241000E" 
+											class="collapse show" 
+											aria-labelledby="GN3241000E-header" 
+											data-parent="#evaluation-2-4-10-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														所有網頁內容標題需有標頭標籤&lt;h1&gt;~&lt;h6&gt;，皆須遵守。
+														<br>
+														當頁面中有&lt;h1&gt;~&lt;h6&gt;標籤即通過軟體檢測，但仍須由人工確認內容是否為文字內容。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<p class="card-text">
+														<p>
+															1. 開啟網頁。
+															<img src="./images/evaluation_screenshot/GN3241000E-1.jpg">
+														</p>
+														<p>
+															2. 檢視原始碼。
+															<img src="./images/evaluation_screenshot/GN3241000E-2.jpg">
+														</p>
+														<p>
+															3. 標題需有標頭標籤，例如框框中的&lt;h1&gt;Cooking…&lt;/h1&gt;、&lt;h2&gt;….&lt;/h2&gt; …..
+															<img src="./images/evaluation_screenshot/GN3241000E-3.jpg">
+														</p>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN3241000E end -->
+								</div> <!-- Evaluation-2-4-10 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-4-10 end --> 
+						</div> 
 					</div> <!-- Operable content end -->
-				</div>
+				</div> <!-- Principle 2 Operable end -->
 				<div class="understandable">
 					<div class="understandable-header principle-header">
 						<h2>原則三：可理解</h2>
