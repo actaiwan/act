@@ -299,8 +299,7 @@
 								<a href="#input-modalities"> 2.5 輸入方式 </a>
 								<ul class="input-modalities-sidebar">
 									<li class="criteria-sidebar">
-										<a href="#pointer-gestures"> 
-											2.5.1 Pointer Gestures </a>
+										<a href="#pointer-gestures"> 2.5.1 Pointer Gestures </a>
 									</li>
 									<li class="criteria-sidebar">
 										<a href="#pointer-cancellation"> 2.5.2 Pointer Cancellation </a>
@@ -8645,7 +8644,9 @@
 								</div> <!-- Evaluation-2-3-3 accordion end -->
 								<hr>
 							</div><!-- Criteria-2-3-3 end -->
-						</div> <!-- Guideline 2-3 Seisures and Physical Reactions end -->
+						</div> <!-- Guideline 2.3 Seisures and Physical Reactions end -->
+
+						<!-- Guideline 2.4 start -->
 						<div class="guideline-header">
 							<h3 class="anchor" id="navigable"> 指引 2.4 可導覽 </h3>
 							<p>
@@ -10382,7 +10383,812 @@
 								</div> <!-- Evaluation-2-4-10 accordion end -->
 								<hr>
 							</div> <!-- Criteria-2-4-10 end --> 
-						</div> 
+						</div> <!-- Guideline 2.4 end --> 
+
+						<!-- Guideline 2.5 Input Modalities start -->
+						<div class="guideline-header">
+							<h3 class="anchor" id="input-modalities"> 指引 2.5 輸入方式 </h3>
+							<p>
+								以鍵盤以外的各種輸入方式，讓使用者能輕鬆地進行功能性操作。
+							</p>
+						</div>
+						<div class="guideline-content">
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="pointer-gestures"> 2.5.1 指標手勢 (A) </h4>
+								<p>
+									除非基於多點或基於路徑的手勢有其必要性，所有使用多點或基於路徑的手勢進行的功能性操作，都可以使用單一指標操作而無需使用基於路徑的手勢。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+										No inspection code for 2.5.1
+									</button>
+								</div><!-- Inspection-2-5-1 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-5-1-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.5.1
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-5-1-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1250100E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250100E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250100E：提供單點指標控制元件以實現與基於路徑或多點手勢相同的結果
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250100E" 
+											class="collapse show" 
+											aria-labelledby="GN1250100E-header" 
+											data-parent="#evaluation-2-5-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於基於路徑手勢的內容滑塊：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																檢查單點指標可操作控制元件在內容滑塊上方或附近是否存在，且控制元件推動相鄰組成的內容。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#1為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250100E end -->
+									<div class="card">
+										<div class="card-header" id="GN1250101E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250101E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250101E：為控制滑塊提供單點啟動
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250101E" 
+											class="collapse" 
+											aria-labelledby="GN1250101E-header" 
+											data-parent="#evaluation-2-5-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														<p>本技術的目的是確保在執行基於路徑的手勢時遇到困難的使用者可以操作控制滑塊。控制滑塊是一個具有“拇指移動”的軌道，可以沿著該軌道移動以設置數值。 </p>
+														<img src="./images/evaluation_screenshot/GN1250101E-1.jpg">
+														<p> 圖1.一個範例控制元件滑塊的螢幕截圖，其中滑塊位於軌道的中間。 </p>
+														<p> 
+															允許使用者在某個範圍內設置一個值，例如設置音量，更改顏色的色相值，在貸款計算器中放入所需的金額或選擇要捐贈給慈善機構的款項。需要基於路徑的手勢的滑塊將使用向左或向右滑動來更改值，或在特定方向上拖動滑塊的拇指來更改值。
+															<br>
+															無需基於路徑的手勢即可進行啟動的簡單備用方法是使控制滑塊的軌道可點擊，可透過單擊或單擊軌道來指定值。
+															<br>
+															提供控制元件(例如，箭頭按鈕)允許透過點(tap)或點擊(click)來增加或減少該值，可以允許設置更細粒度的值。
+														</p>
+														<p>
+															注意：在觸控螢幕裝置上，當打開諸如內置螢幕報讀軟體之類的作業系統級輔助技術(AT)時，由作者提供的基於路徑的手勢通常無作用。這是因為AT通常會取消基於路徑的手勢，因此它們將無法到達創作的內容。但是，當客制控制元件建立在標準控制元件之上時，這些控制元件也可以通過AT手勢(如垂直滑動)來更改值(參見原始碼範例)。
+														</p>
+													</p>
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於基於路徑手勢的內容滑塊：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																檢查是否可以通過點擊或使用指標單擊來設置控制滑塊(範圍)的值。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#1為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250101E end -->
+									<div class="card">
+										<div class="card-header" id="FA1250102E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA1250102E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA1250102E：由於提供的功能只有基於路徑的手勢，而沒有單點指標替代方法，而導致成功準則2.5.1失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA1250102E" 
+											class="collapse" 
+											aria-labelledby="FA1250102E-header" 
+											data-parent="#evaluation-2-5-1-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														基於路徑手勢操作的功能，需提供透過單點指標操作的方法，否則失敗。
+													</p>
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於透過基於路徑的手勢啟動功能的每個部分：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																檢查控制元件是否可用，通過點擊或單擊即可執行相同的功能。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														如果檢查#1為否，則符合失敗條件，此內容未通過成功準則。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA1250102E end -->
+								</div> <!-- Evaluation-2-5-1 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-5-1 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="pointer-cancellation"> 2.5.2 指標取消 (A) </h4>
+								<div class="criteria-brief">
+									<p>
+										對於可以使用單一指標操作的功能，至少須滿足下列條件之一：
+									</p> 
+									<ul>
+										<li>
+											無向下事件：指標的向下事件不被用於執行任何部分的功能；
+										</li>
+										<li>
+											中止或取消：該功能的完成在向上事件，並且有一種機制可以在完成之前中止該功能或在完成後取消該功能；
+										</li>
+										<li>
+											向上逆轉：向上事件逆轉先前的向下事件之任何結果。
+										</li>
+										<li>
+											必要性：完成向下事件的功能有其必要性。
+										</li>
+									</ul>
+								</div>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.5.2
+									</button>
+								</div> <!-- Inspection-2-5-2 accordion end --> 
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-5-2-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.5.2
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-5-2-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1250200E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250200E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250200E：確保可以取消拖放操作
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250200E" 
+											class="collapse show" 
+											aria-labelledby="GN1250200E-header" 
+											data-parent="#evaluation-2-5-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														此技術的目的是確保使用基於路徑的拖放(drag-and-drop)操作將項目從初始位置移動到放置目標，使用者可以在拾取目標後中止操作。可透過在放置區域外釋放項目，或者將項目移回其原始位置來完成。第三個選項是在元素被放到目標上之後，提供刪除或取消。
+													</p>
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於可拖動的內容，檢查拖放操作是否可以透過以下方式撤銷： 
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																將拾取物品於預計放下的目標外放下
+															</li>
+															<li>
+																將拾取的物品拖回原始的位置
+															</li>
+															<li>
+																刪除項目後會出現確認對話框或撤銷控制元件
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#1、#2、#3中至少有一個選項為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250200E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1250201E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250201E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250201E：使用網頁規範原生控制元件來確保在向上事件發生時可觸發功能
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250201E" 
+											class="collapse" 
+											aria-labelledby="GN1250201E-header" 
+											data-parent="#evaluation-2-5-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														<p> 此技術的目的是確保使用者在嘗試與控制元件進行互動時不會發生意外觸發事件的動作。可以透過依靠指標的向上事件up-event(例如onclick或mouseup事件)來最直接地完成此操作。</p>
+														<p> 滿足此成功準則的最簡單方法是簡單地使用控制元件的預設行為，而不用明顯的事件觸發來覆蓋該行為。向上事件幾乎是所有控制元件以及任何編程或標記語言的預設行為。</p>
+														<p> 在以向下事件down-event觸發控制元件的本機語言中，通常有充分的理由並且很容易恢復。例如，HTML輸入元素可能使游標在“pointer down”事件上進入可編輯區域，因為該動作可簡易回復，因此符合Pointer Cancellation SC的要求。因為如果使用者在按下控制元件後意識到有錯誤，則可以簡單地將其指標移離擊中區域，同時仍然按住該指標，然後釋放其指標，並且不會觸發該事件。</p>
+													</p>
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於所有可點擊的控制元件：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																啟動向下事件，然後在觸發向上事件之前，將指標移到目標之外，然後釋放指標以觸發向上事件。
+															</li>
+															<li>
+																檢查將指標釋放到目標的擊中區域之外時，是否未觸發操作。
+															</li>
+															<li>
+																如果觸發動作，檢查動作是否可逆。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#2、#3中至少有一個選項為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250201E end -->
+									<div class="card"> 
+										<div class="card-header" id="FA1250202E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA1250202E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA1250202E：由於向下事件啟動一個控制元件而導致成功準則2.5.2失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA1250202E" 
+											class="collapse" 
+											aria-labelledby="FA1250202E-header" 
+											data-parent="#evaluation-2-5-2-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														此失敗條文的目的是描述以下情況：
+														<ol>
+															<li>
+																控制元件設定於發生指標向下事件時啟動功能；
+															</li>
+															<li>
+																沒有其他中止或撤消的機制；
+															</li>
+															<li>
+																事件不會逆轉啟動的結果；
+															</li>
+															<li>
+																向下事件對執行與完成功能非必需。
+															</li>
+														</ol>
+													</p>
+													<h5 class="card-title"> 評量程序 </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															使用指標輸入(滑鼠、觸控螢幕、手寫筆)以及所有可用控制元件(按鈕、鏈結、複雜程式物件)在裝置上打開內容：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																觸發向下事件(例如，透過按下但不釋放滑鼠按鈕，或者將手指或手寫筆放在觸控螢幕上)，並檢查是否在向上事件之前執行功能(例如，釋放滑鼠按鈕或抬起手指/手寫筆)。
+															</li>
+															<li>
+																如果在向下事件上執行功能，檢查是否觸發向上事件(釋放按下的滑鼠按鈕，或從觸控螢幕上放開手指或手寫筆)，是否可以反轉結果。
+															</li>
+															<li>
+																評估在事件發生時，向下事件是否具執行和完成功能必要性。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														如果#1為是，而#2和#3為否，則符合失敗條件，此內容未通過成功準則。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA1250202E end -->
+								</div> <!-- Evaluation-2-5-2 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-5-2 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="label-in-the-name"> 2.5.3 標籤名稱 (A) </h4>
+								<p>
+									對於具有包含文字或影像文字標籤的使用者介面元件，該標籤名稱所包含的文字應以可視化呈現。
+								</p>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.5.3
+									</button>
+								</div> <!-- Inspection-2-5-3 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-5-3-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.5.3
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-5-3-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1250300E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250300E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250300E：確保無障礙名稱包含可見文字
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250300E" 
+											class="collapse show" 
+											aria-labelledby="GN1250300E-header" 
+											data-parent="#evaluation-2-5-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														<p>確保語音輸入使用者可以可靠地操作網頁內容。</p>
+														<p>組成可見標籤的文字字符串必須完整地出現在無障礙名稱中。</p>
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於具有可見標籤的所有控制元件，檢查：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																控制元件的無障礙名稱包含與可見標籤有相同文字且相同順序。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														#1為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250300E end -->
+									<div class="card"> 
+										<div class="card-header" id="GN1250301E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250301E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250301E：將無障礙名稱與可見標籤匹配
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250301E" 
+											class="collapse show" 
+											aria-labelledby="GN1250301E-header" 
+											data-parent="#evaluation-2-5-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														語音識別軟體處理語音輸入並查找匹配項時，將使用控制元件的無障礙名稱。如果標籤中的文字與無障礙名稱中的文字不匹配，則可能對使用者造成問題。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<div class="card-text">
+														<ol class="evaluation-procedure">
+															<li>
+																對於輸入控制元件，檢查每個輸入具有相鄰文字作為其標籤。
+															</li>	
+															<li>
+																對於每個輸入，根據無障礙名稱計算，檢查整個文字字符串(不考慮字母大小寫和標點符號)是否與輸入的無障礙名稱匹配。
+															</li>
+															<li>
+																對於按鈕、鏈結、選單和其他非輸入控件，檢查每個包含文字作為其標籤的控制元件。
+															</li>
+															<li>
+																對於每個非輸入控制元件，檢查整個文字字符串(不考慮字母大小寫和標點符號)是否與輸入的無障礙名稱匹配。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														檢查#2和#4為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250301E end -->
+									<div class="card"> 
+										<div class="card-header" id="FA1250303E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA1250303E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA1250303E：由於無障礙名稱不包含可見標籤文字而導致失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA1250303E" 
+											class="collapse show" 
+											aria-labelledby="FA1250303E-header" 
+											data-parent="#evaluation-2-5-3-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														如果可見標籤與控制元件的無障礙名稱不匹配，則語音用戶可能無法直接啟動該控制元件。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5>
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於具有可見標籤的所有控制元件(例如，鏈接文字、按鈕文字、以編程方式鏈結的標籤、帶有文字的鏈結中的圖片)：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																無障礙的名稱與可見標籤相同。
+															</li>	
+															<li>
+																無障礙名稱包含可見標籤字符串的匹配項。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														如果檢查#1和#2為否，則符合失敗條件，此內容未通過成功準則。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA1250303E end -->
+								</div> <!-- Evaluation-2-5-3 accordion end -->
+								<hr>
+							</div><!-- Criteria-2-5-3 end -->
+							<div class="criteria-content accesibility-level-A">
+								<h4 id="motion-actuation"> 2.5.4 動作啟動 (A) </h4>
+								<div>
+									針對藉由裝置動作或使用者動作進行操作的功能，也可以採取使用者介面元件操作，並可截斷針對該動作所作出的回應以防止意外的啟動，但以下情況除外：
+									<ul>
+										<li>
+											支援性介面：該動作用於透過無障礙支援介面來操作功能；
+										</li>
+										<li> 
+											必要性：該動作對於功能有其必要，且這樣做會使活動失效。
+										</li> 
+										
+									</ul>
+								</div>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		Inspection code for 2.5.4
+									</button>
+								</div> <!-- Inspection-2-5-4 accordion end --> 
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-5-4-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.5.4
+									</button>
+								</div>
+								<div class="accordion collapse evaluation-content" id="evaluation-2-5-4-accordion">
+									<div class="card"> 
+										<div class="card-header" id="GN1250400E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#GN1250400E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														GN1250400E：為動作啟動輸入提供常規控制元件和應用程式設定
+												</button>
+											</h5>
+										</div>
+
+										<div id="GN1250400E" 
+											class="collapse show" 
+											aria-labelledby="GN1250400E-header" 
+											data-parent="#evaluation-2-5-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<div class="card-text">
+														<p> 本技術的目的是確保： </p>
+														<div> 
+															使用安裝的裝置或無法精確操作裝置的人可以通過更常規的使用者介面組件提供輸入，並且可能由於震動或其他運動障礙而意外啟動感應器的人可以關閉動作啟動功能，以防止意外觸發功能。
+														</div>
+														<p> 當使用諸如加速度計或陀螺儀之類的裝置感應器來收集輸入時： </p>
+														<div> 
+															提供不依賴感應器輸入的按鈕、鏈結或其他常規控制元件。
+															<br>
+															提供允許使用者關閉感應器資料的設定。
+														</div>
+													</div>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於可響應運動感應器執行功能的每個輸入：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																檢查是否存在不依賴感應器執行相同功能的機制。
+															</li>	
+															<li>
+																檢查是否存在可關閉動作偵測的使用者設定。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														檢查#1和#2為是。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- GN1250400E end -->
+									<div class="card"> 
+										<div class="card-header" id="FA1250401E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA1250401E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA1250401E：由於無法停用動作啟動而導致失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA1250401E" 
+											class="collapse" 
+											aria-labelledby="FA1250401E-header" 
+											data-parent="#evaluation-2-5-4-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<h5 class="card-title"> Evaluation rule </h5> 
+													<p class="card-text">
+														必須提供停用動作啟動功能，否則失敗。
+													</p>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<div class="card-text">
+														<p class="procedure-subject"> 
+															對於動作感應器觸發的每個功能：
+														</p>
+														<ol class="evaluation-procedure">
+															<li>
+																檢查此功能是否必要，必須使用動作感應器才能支持此功能。
+															</li>	
+															<li>
+																檢查是否存在停用動作偵測的使用者設定。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														如果#1和#2為否，則符合失敗條件，此內容未通過成功準則。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA1250401E end -->
+								</div> <!-- Evaluation-2-5-4 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-5-4 end -->
+
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="target-size"> 2.5.5 目標尺寸 (AAA) </h4>
+								<div>
+									除以下條件外，指標輸入的目標尺寸至少為44乘44 CSS像素：
+									<ul>
+										<li>
+											等效：目標可透過同一網頁上等效的鏈結或控制元件獲得，該目標尺寸至少須為44乘44 CSS像素；
+										</li>
+										<li> 
+											行內：指標操作目標位於句子或文字區塊內；
+										</li> 
+										<li>
+											使用者代理控制：指標操作目標的外觀是由使用者代理決定而非由網頁作者修改；
+										</li>
+										<li> 
+											必要性：指標操作目標特定的呈現方式對於資訊的傳遞有其必要性。
+										</li>
+										
+									</ul>
+								</div>	
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.5.5
+									</button>
+								</div> <!-- Inspection-2-5-5 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+											No evaluation code for 2.5.5
+									</button>
+								</div> <!-- Evaluation-2-5-5 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-5-5 end --> 
+
+							<div class="criteria-content accesibility-level-AAA">
+								<h4 id="concurrent-input-mechanisms"> 2.5.6 並行輸入機制 (AAA) </h4>
+								<div>
+									網頁內容不會限制使用平台可用的輸入方式，除非該限制有其必要性，確保內容的安全性，或要求尊重使用者設定。
+								</div>
+								<div class="inspection-collapse">
+									<button class="btn " 
+											type="button" 
+											disabled>
+										<i class="fa fa-chevron-right"></i>
+								    		No inspection code for 2.5.6
+									</button>
+								</div> <!-- Inspection-2-5-6 accordion end -->
+
+								<div class="evaluation-collapse">
+									<button class="btn" 
+											type="button" 
+											data-toggle="collapse" 
+											data-target="#evaluation-2-5-6-accordion" 
+											aria-expanded="true"> 
+										<i class="fa fa-chevron-right"></i>
+										Evaluation code for criteria 2.5.6
+									</button>
+								</div> <!-- Evaluation-2-5-6 accordion end -->
+								<div class="accordion collapse evaluation-content" id="evaluation-2-5-6-accordion">
+									<div class="card"> 
+										<div class="card-header" id="FA3250600E-header">
+											<h5>
+												<button class="btn btn-block text-left" 
+														type="button" 
+														data-toggle="collapse" 
+														data-target="#FA3250600E" 
+														aria-expanded="true" 
+														aria-controls="collapseOne">
+														FA3250600E：由於觸控設備上的互動僅限於觸控而失敗
+												</button>
+											</h5>
+										</div>
+
+										<div id="FA3250600E" 
+											class="collapse show" 
+											aria-labelledby="FA3250600E-header" 
+											data-parent="#evaluation-2-5-6-accordion">
+											<div class="card">
+												<div class="card-body evaluation-detail"> 
+													<div class="card-text">
+														<p> 本失敗條文的目的是描述以下情況：具有觸控螢幕裝置的使用者無法使用他需要的其他輸入方式(例如，附加/外部滑鼠或鍵盤)。</p>
+														<p> 網頁內容有多種方法和試探方法來確定使用者的裝置是否具有觸控螢幕。但是即使存在觸控螢幕，使用者也可以使用其他輸入方式。使用者不一定要使用觸控螢幕與網頁內容進行互動。。</p>
+														<p> 如果在檢測到觸控螢幕時將網頁內容設計為只能透過觸控進行操作，則這些使用者將無法利用其他(可能是首選)輸入機制來操作內容。</p>
+													</div>
+													<h5 class="card-title"> Evaluation example </h5> 
+													<div class="card-text">
+														<ol class="evaluation-procedure">
+															<li>
+																在具有觸控螢幕和至少一個其他輸入方式的裝置上打開內容-這包括具有觸控功能的筆記型電腦和帶有配對的外部鍵盤和滑鼠的觸控螢幕裝置(智慧手機或平板電腦)。
+															</li>	
+															<li>
+																檢查是否不僅可以使用觸控螢幕，還可以使用其他輸入機制(鍵盤和滑鼠)來操作所有互動控制元件。
+															</li>
+															<li> 
+																如果觸控螢幕的存在導致互動控制元件無法顯示(與在沒有觸控螢幕的裝置上查看時的相同內容相比)，檢查是否存在其他輸入機制的使用者可以操作該控制元件的替代控制元件方式。
+															</li>
+														</ol>
+													</div>
+													<h5 class="card-title"> 預期結果 </h5>
+													<div class="card-text">
+														如果檢查#2或#3為否，則符合失敗條件，此內容未通過成功準則。
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- FA2250600E end -->
+								</div> <!-- Evaluation-2-5-6 accordion end -->
+								<hr>
+							</div> <!-- Criteria-2-5-6 end --> 
+						</div>  <!-- Guideline 2.5 Input Modalities end -->
+
 					</div> <!-- Operable content end -->
 				</div> <!-- Principle 2 Operable end -->
 				<div class="understandable">
