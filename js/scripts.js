@@ -9,26 +9,26 @@ function toggle_criteria_visibility(event){
   // Level A check
   if (a_check.checked != true){
   	console.log("A is not checked.");
-    var content_list = document.querySelectorAll(".accesibility-level-A .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-A .div-to-filter-out");
     console.log("length of selected item: " + (content_list.length));
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", true);
       console.log("toggle class");
     }
-    var title_list = document.querySelectorAll(".accesibility-level-A h4");
+    var title_list = document.querySelectorAll(".accessibility-level-A h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", true);
     }
   }
   else{
-    var content_list = document.querySelectorAll(".accesibility-level-A .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-A .div-to-filter-out");
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", false);
     }
-    var title_list = document.querySelectorAll(".accesibility-level-A h4");
+    var title_list = document.querySelectorAll(".accessibility-level-A h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", false);
@@ -37,24 +37,24 @@ function toggle_criteria_visibility(event){
   // Level AA check
   if (aa_check.checked != true){
     // Get all the criteria of level AA
-    var content_list = document.querySelectorAll(".accesibility-level-AA .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-AA .div-to-filter-out");
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", true);
     }
-    var title_list = document.querySelectorAll(".accesibility-level-AA h4");
+    var title_list = document.querySelectorAll(".accessibility-level-AA h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", true);
     }
   }
   else{
-    var content_list = document.querySelectorAll(".accesibility-level-AA .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-AA .div-to-filter-out");
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", false);
     }
-    var title_list = document.querySelectorAll(".accesibility-level-AA h4");
+    var title_list = document.querySelectorAll(".accessibility-level-AA h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", false);
@@ -64,24 +64,24 @@ function toggle_criteria_visibility(event){
   // Level AAA check
   if (aaa_check.checked != true){
     // Get all the criteria of level AAA
-    var content_list = document.querySelectorAll(".accesibility-level-AAA .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-AAA .div-to-filter-out");
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", true);
     }
-    var title_list = document.querySelectorAll(".accesibility-level-AAA h4");
+    var title_list = document.querySelectorAll(".accessibility-level-AAA h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", true);
     }
   }
   else{
-    var content_list = document.querySelectorAll(".accesibility-level-AAA .div-to-filter-out");
+    var content_list = document.querySelectorAll(".accessibility-level-AAA .div-to-filter-out");
     for (var i = 0; i < content_list.length; i++){
       var target = content_list[i];
       target.classList.toggle("filter-out", false);
     }
-    var title_list = document.querySelectorAll(".accesibility-level-AAA h4");
+    var title_list = document.querySelectorAll(".accessibility-level-AAA h4");
     for (var i = 0; i < title_list.length; i++){
       var target = title_list[i];
       target.classList.toggle("filter-out", false);
