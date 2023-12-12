@@ -18,6 +18,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 	<!-- Embeded syntax coloring with Prism -->
 	<link rel="stylesheet" href="themes/prism.css">
+	<!-- styesheet for gitalk -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
 </head>
 <body >
@@ -49,8 +51,10 @@
 						<input type="checkbox" checked="true" id="Level-AAA-check"> AAA 
 					</span	>
 					<span class="current-filter-code">
-						<input type="checkbox" checked="true" id="inspection-check"> 稽核碼
+						<input type="checkbox" checked="true" id="inspection-check"> 檢測碼
 						<input type="checkbox" checked="true" id="evaluation-check"> 評量碼
+						<input type="checkbox" checked="true" id="comment-check"> 
+						留言
 					</span>
 					<button class="btn btn-info"
 							type="button"
@@ -446,7 +450,7 @@
 		<div class="container-fluid main-content-container" id="main-content-container">
 			<div class="main-content">
 				<div class="main-content-header" id="main-content-header">
-					<h1>無障礙規範2.0版導覽</h1>
+					<h1>無障礙規範導覽</h1>
 				</div>
 				<!-- A "back-to-top" button -->
 				<button class="btn-circle back-to-top-btn">
@@ -769,22 +773,22 @@
            <li>
             開啟瀏覽器如Firefox，並搭配外掛擴充元件如「Firefox Accessibility Extension」。
             <br/>
-            <img alt="#" src="https://accessibility.moda.gov.tw/ImagesUploads/73162855-3172-407c-93ab-3fd1dee46cb3.jpg" style="height:90%; width:90%"/>
+            <img alt="#" crossorigin="anonymous" src="https://accessibility.moda.gov.tw/ImagesUploads/73162855-3172-407c-93ab-3fd1dee46cb3.jpg" style="height:90%; width:90%"/>
            </li>
            <li>
             點選選單列中的Accessibility→Text Equivalents→Show Text Equivalents來顯示此圖片的替代文字。
             <br/>
-            <img alt="#" src="https://accessibility.moda.gov.tw/ImagesUploads/ff70d1e6-b6f9-4f7c-ad66-ef04aa38687f.jpg" style="height:90%; width:90%"/>
+            <img alt="#" crossorigin="anonymous" src="https://accessibility.moda.gov.tw/ImagesUploads/ff70d1e6-b6f9-4f7c-ad66-ef04aa38687f.jpg" style="height:90%; width:90%"/>
            </li>
            <li>
             點選網頁右鍵”檢視原始碼”。
             <br/>
-            <img alt="#" src="https://accessibility.moda.gov.tw/ImagesUploads/8e715193-4d74-454e-aca7-67261fbeaac3.jpg" style="height:90%; width:90%"/>
+            <img alt="#" crossorigin="anonymous" src="https://accessibility.moda.gov.tw/ImagesUploads/8e715193-4d74-454e-aca7-67261fbeaac3.jpg" style="height:90%; width:90%"/>
            </li>
            <li>
             可以對照程式碼中，我們可以看到只有第一張圖(img src="w3c1.png")有替代文字(alt="這是w3c網站")，其他圖片項目的替代文字都是空值(alt="")。
             <br/>
-            <img alt="#" src="https://accessibility.moda.gov.tw/ImagesUploads/256f9c34-7a19-4a7d-9ad5-862943d74ece.jpg" style="height:90%; width:90%"/>
+            <img alt="#" crossorigin="anonymous" src="https://accessibility.moda.gov.tw/ImagesUploads/256f9c34-7a19-4a7d-9ad5-862943d74ece.jpg" style="height:90%; width:90%"/>
            </li>
           </ol>
          </div>
@@ -1298,7 +1302,7 @@
            <li>
             使用Google Chrome「檢視原始碼」顯示連結 (按下右鍵→檢視原始碼)。
             <br/>
-            <img alt="檢視原始碼" src="https://accessibility.moda.gov.tw/ImagesUploads/8558d821-cdd6-4902-b7b3-7ed7600e05f4.jpg" style="height:90%; width:90%"/>
+            <img alt="檢視原始碼" crossorigin='anonymous' src="https://accessibility.moda.gov.tw/ImagesUploads/8558d821-cdd6-4902-b7b3-7ed7600e05f4.jpg" style="height:90%; width:90%"/>
            </li>
            <li>
             檢查裝飾性圖片是否有用css方式置入。
@@ -1352,6 +1356,20 @@
       <!-- CS1110114E end -->
      </div>
      <!-- sc111 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc111-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc111-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc111">
+       </div>
+      </div>
+     </div>
+     <!-- sc111 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -1524,6 +1542,20 @@
       <!-- GN1120102E end -->
      </div>
      <!-- sc121 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc121-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc121-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc121">
+       </div>
+      </div>
+     </div>
+     <!-- sc121 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -1597,6 +1629,20 @@
       <!-- GN1120200E end -->
      </div>
      <!-- sc122 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc122-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc122-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc122">
+       </div>
+      </div>
+     </div>
+     <!-- sc122 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -1783,6 +1829,20 @@
       <!-- GN1120302E end -->
      </div>
      <!-- sc123 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc123-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc123-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc123">
+       </div>
+      </div>
+     </div>
+     <!-- sc123 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -1845,6 +1905,20 @@
       <!-- GN2120400E end -->
      </div>
      <!-- sc124 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc124-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc124-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc124">
+       </div>
+      </div>
+     </div>
+     <!-- sc124 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -1913,6 +1987,20 @@
       <!-- GN2120500E end -->
      </div>
      <!-- sc125 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc125-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc125-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc125">
+       </div>
+      </div>
+     </div>
+     <!-- sc125 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -2016,6 +2104,20 @@
       <!-- GN3120601E end -->
      </div>
      <!-- sc126 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc126-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc126-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc126">
+       </div>
+      </div>
+     </div>
+     <!-- sc126 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -2084,6 +2186,20 @@
       <!-- GN3120700E end -->
      </div>
      <!-- sc127 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc127-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc127-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc127">
+       </div>
+      </div>
+     </div>
+     <!-- sc127 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -2193,6 +2309,20 @@
       <!-- GN3120801E end -->
      </div>
      <!-- sc128 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc128-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc128-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc128">
+       </div>
+      </div>
+     </div>
+     <!-- sc128 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -2301,6 +2431,20 @@
       <!-- GN3120901E end -->
      </div>
      <!-- sc129 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc129-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc129-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc129">
+       </div>
+      </div>
+     </div>
+     <!-- sc129 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3118,6 +3262,20 @@
       <!-- HM1130113E end -->
      </div>
      <!-- sc131 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc131-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc131-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc131">
+       </div>
+      </div>
+     </div>
+     <!-- sc131 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3382,6 +3540,20 @@
       <!-- CS1130203E end -->
      </div>
      <!-- sc132 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc132-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc132-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc132">
+       </div>
+      </div>
+     </div>
+     <!-- sc132 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3450,6 +3622,20 @@
       <!-- GN1130300E end -->
      </div>
      <!-- sc133 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc133-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc133-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc133">
+       </div>
+      </div>
+     </div>
+     <!-- sc133 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3614,6 +3800,20 @@
       <!-- FA2130402E end -->
      </div>
      <!-- sc134 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc134-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc134-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc134">
+       </div>
+      </div>
+     </div>
+     <!-- sc134 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3765,6 +3965,20 @@
       <!-- FA2130501E end -->
      </div>
      <!-- sc135 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc135-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc135-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc135">
+       </div>
+      </div>
+     </div>
+     <!-- sc135 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -3864,6 +4078,20 @@
       <!-- AR3130600E end -->
      </div>
      <!-- sc136 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc136-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc136-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc136">
+       </div>
+      </div>
+     </div>
+     <!-- sc136 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4000,6 +4228,20 @@
       <!-- GN1140102E end -->
      </div>
      <!-- sc141 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc141-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc141-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc141">
+       </div>
+      </div>
+     </div>
+     <!-- sc141 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4068,6 +4310,20 @@
       <!-- GN1140200E end -->
      </div>
      <!-- sc142 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc142-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc142-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc142">
+       </div>
+      </div>
+     </div>
+     <!-- sc142 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4244,6 +4500,20 @@
       <!-- GN2140303E end -->
      </div>
      <!-- sc143 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc143-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc143-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc143">
+       </div>
+      </div>
+     </div>
+     <!-- sc143 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4524,6 +4794,20 @@ p, label, input { font-size: 1em; }</code></pre>
       <!-- CS2140402E end -->
      </div>
      <!-- sc144 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc144-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc144-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc144">
+       </div>
+      </div>
+     </div>
+     <!-- sc144 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4639,6 +4923,20 @@ p, label, input { font-size: 1em; }</code></pre>
       <!-- CS2140500E end -->
      </div>
      <!-- sc145 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc145-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc145-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc145">
+       </div>
+      </div>
+     </div>
+     <!-- sc145 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4820,6 +5118,20 @@ p, label, input { font-size: 1em; }</code></pre>
       <!-- GN3140603E end -->
      </div>
      <!-- sc146 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc146-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc146-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc146">
+       </div>
+      </div>
+     </div>
+     <!-- sc146 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -4895,6 +5207,20 @@ p, label, input { font-size: 1em; }</code></pre>
       <!-- GN3140700E end -->
      </div>
      <!-- sc147 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc147-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc147-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc147">
+       </div>
+      </div>
+     </div>
+     <!-- sc147 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -5361,6 +5687,20 @@ p { line-height: 150%; }</code></pre>
       <!-- HM3140806E end -->
      </div>
      <!-- sc148 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc148-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc148-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc148">
+       </div>
+      </div>
+     </div>
+     <!-- sc148 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -5474,6 +5814,20 @@ p { line-height: 150%; }</code></pre>
       <!-- CS3140900E end -->
      </div>
      <!-- sc149 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc149-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc149-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc149">
+       </div>
+      </div>
+     </div>
+     <!-- sc149 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -5974,6 +6328,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA2141008E end -->
      </div>
      <!-- sc1410 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc1410-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc1410-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc1410">
+       </div>
+      </div>
+     </div>
+     <!-- sc1410 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6238,6 +6606,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA2141104E end -->
      </div>
      <!-- sc1411 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc1411-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc1411-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc1411">
+       </div>
+      </div>
+     </div>
+     <!-- sc1411 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6533,6 +6915,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA2141205E end -->
      </div>
      <!-- sc1412 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc1412-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc1412-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc1412">
+       </div>
+      </div>
+     </div>
+     <!-- sc1412 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6650,6 +7046,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA2141301E end -->
      </div>
      <!-- sc1413 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc1413-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc1413-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc1413">
+       </div>
+      </div>
+     </div>
+     <!-- sc1413 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6796,6 +7206,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1210101E end -->
      </div>
      <!-- sc211 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc211-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc211-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc211">
+       </div>
+      </div>
+     </div>
+     <!-- sc211 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6862,6 +7286,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1210200E end -->
      </div>
      <!-- sc212 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc212-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc212-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc212">
+       </div>
+      </div>
+     </div>
+     <!-- sc212 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -6935,6 +7373,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3210300E end -->
      </div>
      <!-- sc213 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc213-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc213-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc213">
+       </div>
+      </div>
+     </div>
+     <!-- sc213 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7061,6 +7513,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA1210401E end -->
      </div>
      <!-- sc214 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc214-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc214-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc214">
+       </div>
+      </div>
+     </div>
+     <!-- sc214 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7179,6 +7645,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1220101E end -->
      </div>
      <!-- sc221 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc221-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc221-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc221">
+       </div>
+      </div>
+     </div>
+     <!-- sc221 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7450,6 +7930,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1220205E end -->
      </div>
      <!-- sc222 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc222-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc222-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc222">
+       </div>
+      </div>
+     </div>
+     <!-- sc222 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7509,6 +8003,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3220300E end -->
      </div>
      <!-- sc223 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc223-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc223-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc223">
+       </div>
+      </div>
+     </div>
+     <!-- sc223 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7577,6 +8085,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3220400E end -->
      </div>
      <!-- sc224 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc224-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc224-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc224">
+       </div>
+      </div>
+     </div>
+     <!-- sc224 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7697,6 +8219,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3220501E end -->
      </div>
      <!-- sc225 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc225-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc225-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc225">
+       </div>
+      </div>
+     </div>
+     <!-- sc225 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7726,6 +8262,20 @@ p { line-height: 150%; }</code></pre>
      <div class="accordion collapse evaluation-content" id="evaluation-sc226-accordion">
      </div>
      <!-- sc226 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc226-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc226-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc226">
+       </div>
+      </div>
+     </div>
+     <!-- sc226 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7873,6 +8423,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1230101E end -->
      </div>
      <!-- sc231 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc231-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc231-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc231">
+       </div>
+      </div>
+     </div>
+     <!-- sc231 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -7937,6 +8501,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3230200E end -->
      </div>
      <!-- sc232 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc232-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc232-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc232">
+       </div>
+      </div>
+     </div>
+     <!-- sc232 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -8013,6 +8591,20 @@ p { line-height: 150%; }</code></pre>
       <!-- CS3230300E end -->
      </div>
      <!-- sc233 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc233-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc233-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc233">
+       </div>
+      </div>
+     </div>
+     <!-- sc233 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -8426,6 +9018,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1240105E end -->
      </div>
      <!-- sc241 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc241-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc241-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc241">
+       </div>
+      </div>
+     </div>
+     <!-- sc241 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -8532,6 +9138,20 @@ p { line-height: 150%; }</code></pre>
       <!-- HM1240200E end -->
      </div>
      <!-- sc242 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc242-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc242-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc242">
+       </div>
+      </div>
+     </div>
+     <!-- sc242 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -8644,6 +9264,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1240301E end -->
      </div>
      <!-- sc243 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc243-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc243-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc243">
+       </div>
+      </div>
+     </div>
+     <!-- sc243 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -8999,6 +9633,20 @@ p { line-height: 150%; }</code></pre>
       <!-- CS1240405E end -->
      </div>
      <!-- sc244 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc244-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc244-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc244">
+       </div>
+      </div>
+     </div>
+     <!-- sc244 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9111,6 +9759,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2240601E end -->
      </div>
      <!-- sc245 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc245-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc245-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc245">
+       </div>
+      </div>
+     </div>
+     <!-- sc245 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9223,6 +9885,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2240601E end -->
      </div>
      <!-- sc246 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc246-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc246-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc246">
+       </div>
+      </div>
+     </div>
+     <!-- sc246 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9296,6 +9972,20 @@ p { line-height: 150%; }</code></pre>
       <!-- CS2240700E end -->
      </div>
      <!-- sc247 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc247-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc247-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc247">
+       </div>
+      </div>
+     </div>
+     <!-- sc247 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9364,6 +10054,20 @@ p { line-height: 150%; }</code></pre>
       <!-- HM3240800E end -->
      </div>
      <!-- sc248 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc248-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc248-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc248">
+       </div>
+      </div>
+     </div>
+     <!-- sc248 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9647,6 +10351,20 @@ p { line-height: 150%; }</code></pre>
       <!-- HM3240904E end -->
      </div>
      <!-- sc249 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc249-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc249-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc249">
+       </div>
+      </div>
+     </div>
+     <!-- sc249 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9762,6 +10480,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3241000E end -->
      </div>
      <!-- sc2410 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc2410-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc2410-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc2410">
+       </div>
+      </div>
+     </div>
+     <!-- sc2410 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -9951,6 +10683,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA1250102E end -->
      </div>
      <!-- sc251 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc251-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc251-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc251">
+       </div>
+      </div>
+     </div>
+     <!-- sc251 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10141,6 +10887,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA1250202E end -->
      </div>
      <!-- sc252 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc252-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc252-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc252">
+       </div>
+      </div>
+     </div>
+     <!-- sc252 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10305,6 +11065,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA1250303E end -->
      </div>
      <!-- sc253 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc253-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc253-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc253">
+       </div>
+      </div>
+     </div>
+     <!-- sc253 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10436,6 +11210,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA1250401E end -->
      </div>
      <!-- sc254 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc254-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc254-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc254">
+       </div>
+      </div>
+     </div>
+     <!-- sc254 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10465,6 +11253,20 @@ p { line-height: 150%; }</code></pre>
      <div class="accordion collapse evaluation-content" id="evaluation-sc255-accordion">
      </div>
      <!-- sc255 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc255-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc255-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc255">
+       </div>
+      </div>
+     </div>
+     <!-- sc255 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10544,6 +11346,20 @@ p { line-height: 150%; }</code></pre>
       <!-- FA3250600E end -->
      </div>
      <!-- sc256 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc256-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc256-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc256">
+       </div>
+      </div>
+     </div>
+     <!-- sc256 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10673,6 +11489,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1310100E end -->
      </div>
      <!-- sc311 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc311-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc311-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc311">
+       </div>
+      </div>
+     </div>
+     <!-- sc311 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10776,6 +11606,20 @@ p { line-height: 150%; }</code></pre>
       <!-- HM2310200E end -->
      </div>
      <!-- sc312 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc312-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc312-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc312">
+       </div>
+      </div>
+     </div>
+     <!-- sc312 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10844,6 +11688,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3310300E end -->
      </div>
      <!-- sc313 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc313-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc313-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc313">
+       </div>
+      </div>
+     </div>
+     <!-- sc313 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -10912,6 +11770,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3310400E end -->
      </div>
      <!-- sc314 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc314-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc314-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc314">
+       </div>
+      </div>
+     </div>
+     <!-- sc314 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11138,6 +12010,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3310504E end -->
      </div>
      <!-- sc315 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc315-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc315-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc315">
+       </div>
+      </div>
+     </div>
+     <!-- sc315 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11206,6 +12092,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3310600E end -->
      </div>
      <!-- sc316 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc316-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc316-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc316">
+       </div>
+      </div>
+     </div>
+     <!-- sc316 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11290,6 +12190,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1320100E end -->
      </div>
      <!-- sc321 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc321-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc321-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc321">
+       </div>
+      </div>
+     </div>
+     <!-- sc321 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11508,6 +12422,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1320202E end -->
      </div>
      <!-- sc322 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc322-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc322-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc322">
+       </div>
+      </div>
+     </div>
+     <!-- sc322 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11581,6 +12509,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2320300E end -->
      </div>
      <!-- sc323 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc323-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc323-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc323">
+       </div>
+      </div>
+     </div>
+     <!-- sc323 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11649,6 +12591,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2320400E end -->
      </div>
      <!-- sc324 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc324-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc324-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc324">
+       </div>
+      </div>
+     </div>
+     <!-- sc324 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11766,6 +12722,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3320501E end -->
      </div>
      <!-- sc325 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc325-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc325-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc325">
+       </div>
+      </div>
+     </div>
+     <!-- sc325 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -11933,6 +12903,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1330102E end -->
      </div>
      <!-- sc331 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc331-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc331-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc331">
+       </div>
+      </div>
+     </div>
+     <!-- sc331 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12250,6 +13234,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN1330206E end -->
      </div>
      <!-- sc332 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc332-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc332-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc332">
+       </div>
+      </div>
+     </div>
+     <!-- sc332 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12378,6 +13376,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2330301E end -->
      </div>
      <!-- sc333 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc333-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc333-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc333">
+       </div>
+      </div>
+     </div>
+     <!-- sc333 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12548,6 +13560,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN2330403E end -->
      </div>
      <!-- sc334 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc334-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc334-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc334">
+       </div>
+      </div>
+     </div>
+     <!-- sc334 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12736,6 +13762,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3330502E end -->
      </div>
      <!-- sc335 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc335-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc335-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc335">
+       </div>
+      </div>
+     </div>
+     <!-- sc335 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12903,6 +13943,20 @@ p { line-height: 150%; }</code></pre>
       <!-- GN3330603E end -->
      </div>
      <!-- sc336 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc336-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc336-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc336">
+       </div>
+      </div>
+     </div>
+     <!-- sc336 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -12997,6 +14051,20 @@ XHTML、SVG、SMIL和其他基於XML的文檔引用文件類型定義(DTD)或其
      <div class="accordion collapse evaluation-content" id="evaluation-sc411-accordion">
      </div>
      <!-- sc411 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc411-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc411-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc411">
+       </div>
+      </div>
+     </div>
+     <!-- sc411 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -13187,6 +14255,20 @@ XHTML、SVG、SMIL和其他基於XML的文檔引用文件類型定義(DTD)或其
       <!-- GN1410200E end -->
      </div>
      <!-- sc412 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc412-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc412-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc412">
+       </div>
+      </div>
+     </div>
+     <!-- sc412 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -13403,6 +14485,20 @@ XHTML、SVG、SMIL和其他基於XML的文檔引用文件類型定義(DTD)或其
       <!-- FA2410303E end -->
      </div>
      <!-- sc413 evaluations end -->
+     <div class="comment-collapse">
+      <button class="btn" data-target="#comment-sc413-accordion" data-toggle="collapse" type="button">
+       <i class="fa fa-chevron-right">
+       </i>
+       留言
+      </button>
+     </div>
+     <div class="accordion collapse comment-content" id="comment-sc413-accordion">
+      <div class="card">
+       <div class="gitalk-container" id="comment-sc413">
+       </div>
+      </div>
+     </div>
+     <!-- sc413 comment section end -->
     </div>
     <!-- div-to-filter-out end -->
    </div>
@@ -13420,12 +14516,16 @@ XHTML、SVG、SMIL和其他基於XML的文檔引用文件類型定義(DTD)或其
 	<!-- Prism js -->
 	<script type="text/javascript" src="js/prism.js"></script>
 
+	<!-- gitalk js -->
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 	<!-- My js -->
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/gitalk_scripts.js"></script>
 
 	<script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapseBTN').on('click', function () {
+                console.log("inside func");
                 $('#sidebar-container').toggleClass('active');
                 $('#main-content-container').toggleClass('active');
             });

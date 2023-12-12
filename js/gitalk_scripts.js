@@ -23,5 +23,5 @@ const gt_1_2 = new Gitalk({
 
 
 // Rendering
-gt_1_1.render('gt-container-1-1');
-gt_1_2.render('gt-container-1-2');
+gt_1_1.render('comment-sc111');
+gt_1_2.render('comment-sc121');

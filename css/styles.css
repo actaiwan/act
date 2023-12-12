@@ -199,9 +199,12 @@ body{
 .guideline-content{
 	padding-left: 40px;
 }
+.criteria-content h4{
+	margin-top:15px;
+}
 .inspection-collapse .btn, 
 .evaluation-collapse .btn,
-.gt-collapse .btn{
+.comment-collapse .btn{
 	background-color: #e3e0dd;
 	color: #000;
 	margin-top:8px;
@@ -243,7 +246,9 @@ h5.author-note-header,
 .evaluation-collapse.filter-out,
 .evaluation-content.filter-out,
 .inspection-collapse.filter-out,
-.inspection-content.filter-out{
+.inspection-content.filter-out,
+.comment-collapse.filter-out,
+.comment-content.filter-out{
 	position: absolute;
 	visibility: hidden;
 }

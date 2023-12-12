@@ -1,4 +1,5 @@
 function toggle_criteria_visibility(event){
+  console.log("inside filter func");
   // Clear search
   clearSearch();
   var a_check = document.querySelector("#Level-A-check");
@@ -6,6 +7,8 @@ function toggle_criteria_visibility(event){
   var aaa_check = document.querySelector("#Level-AAA-check");
   var ins_check = document.querySelector("#inspection-check");
   var eva_check = document.querySelector("#evaluation-check");
+  var com_check = document.querySelector("#comment-check");
+    
   // Level A check
   if (a_check.checked != true){
   	console.log("A is not checked.");
@@ -118,6 +121,21 @@ function toggle_criteria_visibility(event){
   		var target = evaluation_list[i];
   		target.classList.toggle("filter-out", false);
   	}
+  }
+  // Comments check
+  if (com_check.checked != true){
+    var comment_list = document.querySelectorAll(".comment-collapse, .comment-content");
+    for (var i = 0; i < comment_list.length; i++){
+      var target = comment_list[i];
+      target.classList.toggle("filter-out", true);
+    }
+  }
+  else{
+    var comment_list = document.querySelectorAll(".comment-collapse, .comment-content");
+    for (var i = 0; i < comment_list.length; i++){
+      var target = comment_list[i];
+      target.classList.toggle("filter-out", false);
+    }
   }
 }
 function clearFilter(event){
@@ -400,6 +418,15 @@ function clearSearch(event){
   // Hide the message row again
   message_space("off");
 }
+// collapse sidebar function
+function collapseSidebar(event){
+    console.log("inside function");
+    var s_container = document.querySelector(".sidebar-container");
+    s_container.toggleClass('active');
+    var m_container = document.querySelector(".main-content-container");
+    m_container.toggleClass('active');
+}
+
 // Apply Filter
 document.querySelector("#applyFilterBTN")
   .addEventListener("click", toggle_criteria_visibility);
@@ -414,20 +441,10 @@ document.querySelector("#applySearchBTN")
 document.querySelector("#clearSearchBTN")
   .addEventListener("click", clearSearch);
 
+// collapse sidebar
+document.querySelector("#sidebarCollapseBTN")
+  .addEventListener("click", collapseSidebar);
+
   
 
-// Test for parentNode
-var e_div = document.getElementById("EV1010100");
-var p1 = e_div.parentNode;
-var p2 = p1.parentNode;
-var p3 = p2.parentNode;
-var p4 = p3.parentNode;
-console.log(p1); 
-console.log(p2); 
-console.log(p3); 
-console.log(p4); 
-
-for (var i = 0 ; i < 4; i++){
-  console.log(id_set[i]);
-}
 
