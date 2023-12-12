@@ -227,6 +227,7 @@ h5.author-note-header,
 	height: auto;
 	max-height: 95vh;
 	margin-bottom: 1em;
+	position: relative;
 }
 .card-text pre{
 	width: 85%;
