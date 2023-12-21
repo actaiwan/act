@@ -227,13 +227,15 @@ h5.author-note-header,
 	height: auto;
 	max-height: 95vh;
 	margin-bottom: 1em;
-	position: relative;
 }
 .card-text pre{
 	width: 85%;
 }
 .card-text p{
 	margin-bottom:0.2em;
+}
+.gitalk-container{
+	padding: 1em;
 }
 /* -------- For Filter purpose ------------- */
 .div-to-filter-out.filter-out{
